@@ -1,27 +1,28 @@
 After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
 
 1. Copy and paste the URL for your Heroku web application:
-
+https://still-dawn-61366.herokuapp.com/
 
 2. Copy and paste the URL for your GitHub source code repository:
-
+https://github.com/Davisa94/CS313/invitations   This one is to invite you (its private)
+https://github.com/Davisa94/CS313
 
 3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
-
+There are three pages, the html hello world, the homepage, and the php version of the hello world assignment. they all look pretty
+similar though.
 
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
-
+Well, the navigation bar has the CSS but has yet to be implimented.
 
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
-
+Php is pretty nice, but Heroku is pretty cool, I just thought it was like firebase but it turns
+out it has more use cases.
 
 6. Please select the category you feel best describes your assignment: [A-E]
-A - Some attempt was made
-B - Developing, but significantly deficient
-C - Slightly deficient, but still mostly adequate
-D - Meets requirements
+
 E - Shows creativity and excels above and beyond requirements
 
-E
 
 7. Provide a brief justification (1-2 sentences) for selecting that category.
+Firstly I went ahead and replaced the default index with one of mine so it would be easier to navigate throughout
+the website. Second I added a bit of css that I hope makes it looks better than a plain page.
