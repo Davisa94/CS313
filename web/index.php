@@ -8,7 +8,7 @@ echo "<!DOCTYPE html>
 </head>
 
 <body>
-   <p> Hello World</p>
-   <a href=\"HelloWorld.html\">Hello World Assignment one</a>
+   <p id=\"main\"> Hello World</p>
+   <a class=\"button\" href=\"HelloWorld.html\">Hello World Assignment one</a>
 </body></html>";
 ?>

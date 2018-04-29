@@ -8,6 +8,6 @@ echo "<!DOCTYPE html>
 </head>
 <body>
    <p id=\"main\"> Hello World</p>
-   <a href=\"HelloWorld.html\">Back to HTML version</a>
+   <a class=\"button\" href=\"HelloWorld.html\">Back to HTML version</a>
 </body></html>";
 ?>
