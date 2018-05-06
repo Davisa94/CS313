@@ -4,7 +4,7 @@
     <span class="mdl-layout__title">Austin Benitez CS313 Site</span>
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation">
-      <<?php include 'homeButton.php' ?>
+      <?php include 'homeButton.php'; ?>
       <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/assignments.php">Assignments</a>
       <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/aboutMe.php">About Me</a>
     </nav>
