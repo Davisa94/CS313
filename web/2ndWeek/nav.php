@@ -5,7 +5,7 @@
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation">
       <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/assignments.php">Assignments</a>
-      <a class="mdl-navigation__link" href="#">About Me</a>
+      <a class="mdl-navigation__link" href="../2ndWeek/aboutMe.php">About Me</a>
       <a class="mdl-navigation__link" href="#">Are</a>
       <a class="mdl-navigation__link" href="#">You?</a>
     </nav>
