@@ -2,7 +2,7 @@
 Career  */
 
 #main{
-   background-image: "../img/potato-field-1.jpg"
+   background-image: url("../img/potato-field-1.jpg")
    background: rgba(54, 98, 255, 0.47);
    background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
    background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
