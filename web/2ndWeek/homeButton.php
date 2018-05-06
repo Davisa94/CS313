@@ -1,5 +1,5 @@
 <?php
-// $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 // $active = "";
 // if(strpos($url, 'home') !== false)
 // {
