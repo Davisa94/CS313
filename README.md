@@ -1,1 +1,3 @@
-CS 313 PHP Base Code
+
+# CS313
+CS313 course work

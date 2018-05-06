@@ -4,11 +4,10 @@ echo "<!DOCTYPE html>
 <head>
 <meta charset = \"utf-8\" />
 <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\"/>
-<title>Homepage</title>
+<title>Hello World PHP</title>
 </head>
-
 <body>
    <p id=\"main\"> Hello World</p>
-   <a class=\"button\" href=\"HelloWorld.html\">Hello World Assignment one</a>
+   <a class=\"button\" href=\"HelloWorld.html\">Back to HTML version</a>
 </body></html>";
 ?>
