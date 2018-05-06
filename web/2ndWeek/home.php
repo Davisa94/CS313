@@ -6,6 +6,15 @@
 </head>
 
 <body>
-   <
+   <div id="nav">
+      <!-- Accent-colored raised button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Assignments
+      </button>
+
+   </div>
+   <header>
+   <h1> Welcome to Austin Davis's Home Page </h1>
+   </header>
 </body>
 </html>
