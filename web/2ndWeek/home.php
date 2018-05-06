@@ -6,12 +6,12 @@
 </head>
 
 <body>
-   <div class="mdl-layout">
+
       <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout__title">Material Design Lite</span>
+      <span class="mdl-layout__title" style="text-align:center;">Austin Benitez' Homepage</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="#">Hello</a>
@@ -25,32 +25,27 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout__title">Material Design Lite</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Hello</a>
-      <a class="mdl-navigation__link" href="#">World.</a>
+      Assignments
+      <a class="mdl-navigation__link" href="../HelloWorld.html">Week 01</a>
+      <a class="mdl-navigation__link" href="../2ndWeek/home.php">Week 02</a>
       <a class="mdl-navigation__link" href="#">How</a>
       <a class="mdl-navigation__link" href="#">Are</a>
       <a class="mdl-navigation__link" href="#">You?</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div>Content</div>
+    <div>
+      <header>
+         <h2 style="center;"> Welcome to Austin Davis's Home Page </h1>
+      </header>
+   </div>
   </main>
 </div>
-      <div class="mdl-navigation" id="nav">
-         <!-- Accent-colored raised button with ripple -->
-         <div class="mdl-layout__drawer">
-            Assignments
-            <a class="mdl-navigation__link" href="#">Week 01</a>
-            <a class="mdl-navigation__link" href="#">Week 02</a>
-         </div>
-         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+         <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
            Assignments
          </button>
       </div>
-      <header>
-      <h2 style="center;"> Welcome to Austin Davis's Home Page </h1>
-      </header>
-   </div>
+-->
 
 </body>
 </html>
