@@ -12,7 +12,7 @@
   <main class="mdl-layout__content" id="main">
     <div>
       <header>
-         <h2> Welcome to Austin Davis's Home Page </h1>
+         <h2> Welcome to Austin Benitez's Home Page </h1>
       </header>
 
       <div>
