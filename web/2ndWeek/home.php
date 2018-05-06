@@ -8,7 +8,7 @@
 
 <body>
 
-      <div class="mdl-layout mdl-js-layout" id="main">
+      <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
@@ -29,12 +29,9 @@
 
       <a class="mdl-navigation__link" href="../HelloWorld.html">Week 01</a>
       <a class="mdl-navigation__link" href="../2ndWeek/home.php">Week 02</a>
-      <a class="mdl-navigation__link" href="#">How</a>
-      <a class="mdl-navigation__link" href="#">Are</a>
-      <a class="mdl-navigation__link" href="#">You?</a>
     </nav>
   </div>
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content" id="main">
     <div>
       <header>
          <h2 style="text-align: center;"> Welcome to Austin Davis's Home Page </h1>

@@ -2,8 +2,12 @@
 Career  */
 
 #main{
-   background-image: url("../img/potato-field-1.jpg")
-   background: rgba(54, 98, 255, 0.47);
+   background-image: url("../img/potato-field-1.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* background: rgba(54, 98, 255, 0.47);
    background: -moz-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
    background: -webkit-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
    background: -ms-linear-gradient(left, rgba(59, 113, 251, 0.42) 0%, rgba(54, 98, 255, 0.59) 50%, rgba(59, 113, 251, 0.42) 100%);
@@ -13,5 +17,5 @@ Career  */
    text-align: left;
    text-shadow: 1px 2px #558ABB;
    font-size: 180%;
-   float: center;
+   float: center; */
 }
