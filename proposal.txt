@@ -1,0 +1,11 @@
+Text-based Adventure
+
+
+ [character table:]
+for each character:
+[name][gender][UEID][starting_Health][weakness]
+
+
+Player_interactios:
+for each player:
+[UEID][current_Health][status][relationship]
