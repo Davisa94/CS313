@@ -5,7 +5,4 @@ if(strpos($url, 'home') == false)
 {
    echo "<a class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\" href=\"../2ndWeek/home.php\">Home</a>";
 }
-
-
-
  ?>
