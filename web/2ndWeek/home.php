@@ -8,7 +8,7 @@
 
 <body>
 
-      <div class="mdl-layout mdl-js-layout">
+      <div class="mdl-layout mdl-js-layout" id="main">
   <header class="mdl-layout__header">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
