@@ -4,6 +4,9 @@
    <body>
       <div class="mdl-layout mdl-js-layout">
          <?php require 'nav.php'; ?>
+         <header>
+            <h2>Assignments</h2>
+         </header>
          <main class="mdl-layout__content grid-center" id="content">
             <ul class="mdl-list">
                <li class="mdl-list__item">
