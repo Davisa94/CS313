@@ -1,5 +1,5 @@
 <html>
-   <<?php require 'head.php'; ?>
+   <?php require 'head.php'; ?>
 
    <body>
       <div class="mdl-layout mdl-js-layout">
@@ -24,7 +24,7 @@
                <div>
                   <h3>My Interests and Hobbies</h3>
                   <ul class="mdl-list nested bronze-gradient">
-                     <li class="mdl-list__item content">
+                     <li class="mdl-list__item">
 
                         <span class="mdl-list__item-primary-content content">
                            I love to play minecraft and terraria, and lots of other games. Mainly games that are
@@ -36,7 +36,7 @@
                <div>
                   <h3>My Career Aspirations</h3>
                   <ul class="mdl-list nested steel-gradient">
-                     <li class="mdl-list__item content">
+                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content content">
                            I love to play minecraft and terraria, and lots of other games. Mainly games that are
                            open-world or sandbox or some combination of both
