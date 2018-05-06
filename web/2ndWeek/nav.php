@@ -4,6 +4,18 @@
     <span class="mdl-layout__title">Austin Benitez CS313 Site</span>
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation">
+      <?php
+      $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+      echo $url;
+      $active = ""
+      if(strpos($url, 'home') !== false)
+      {
+         $active = "true"
+      }
+      else {
+         echo "<a class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\" href=\"../2ndWeek/home.php\">Home</a>";
+      }
+       ?>
       <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/assignments.php">Assignments</a>
       <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/aboutMe.php">About Me</a>
       <a class="mdl-navigation__link" href="#">*</a>
