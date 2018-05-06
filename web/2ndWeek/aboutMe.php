@@ -35,7 +35,7 @@
                </div>
                <div>
                   <h3>My Career Aspirations</h3>
-                  <ul class="mdl-list nested steel-gradient">
+                  <ul class="mdl-list nested pink-gradient">
                      <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content content">
                            I love to play minecraft and terraria, and lots of other games. Mainly games that are
