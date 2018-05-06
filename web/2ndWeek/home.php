@@ -16,9 +16,9 @@
                <div class="mdl-layout-spacer"></div>
                <nav class="mdl-navigation">
                   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="/web/2ndWeek/home.php">
-                   home
+                   Home
                  </button>
-                 <a class="mdl-navigation__link" href="#">World.</a>
+                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#">World.</a>
                  <a class="mdl-navigation__link" href="#">How</a>
                  <a class="mdl-navigation__link" href="#">Are</a>
                  <a class="mdl-navigation__link" href="#">You?</a>
