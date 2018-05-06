@@ -27,8 +27,9 @@
                      <li class="mdl-list__item">
 
                         <span class="mdl-list__item-primary-content content">
-                           I love to play minecraft and terraria, and lots of other games. Mainly games that are
-                           open-world or sandbox or some combination of both
+                           As previously stated I Love to play games but I also love to read books of several genres,
+                           mainly sci-fi and fantasy. I also like to write, program(a lot). I also love to spend
+                           time with my wife.
                         </span>
                      </li>
                   </ul>
@@ -38,8 +39,10 @@
                   <ul class="mdl-list nested pink-gradient">
                      <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content content">
-                           I love to play minecraft and terraria, and lots of other games. Mainly games that are
-                           open-world or sandbox or some combination of both
+                           I want to work for a company that accepts peoples weaknesses and
+                           encourages them to better themselves for the sake of themselves
+                           and for the sake of the company. I also wish to do game design at some point
+                           and then retire teaching software engineering/programming.
                         </span>
                      </li>
                   </ul>

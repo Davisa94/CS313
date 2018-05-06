@@ -4,7 +4,7 @@
    <body>
       <div class="mdl-layout mdl-js-layout">
          <?php require 'nav.php'; ?>
-         <main class="mdl-layout__content" id="other">
+         <main class="mdl-layout__content grid-center" id="content">
             <ul class="mdl-list">
                <li class="mdl-list__item">
                   <a class="mdl-list__item-primary-content mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../HelloWorld.php">
