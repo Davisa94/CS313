@@ -2,6 +2,7 @@
 <head>
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+   <link rel="stylesheet" href="homeStyle.css">
    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 
@@ -23,9 +24,9 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout__title">Material Design Lite</span>
+    <span class="mdl-layout__title">Assignments</span>
     <nav class="mdl-navigation">
-      Assignments
+
       <a class="mdl-navigation__link" href="../HelloWorld.html">Week 01</a>
       <a class="mdl-navigation__link" href="../2ndWeek/home.php">Week 02</a>
       <a class="mdl-navigation__link" href="#">How</a>
@@ -36,8 +37,12 @@
   <main class="mdl-layout__content">
     <div>
       <header>
-         <h2 style="center;"> Welcome to Austin Davis's Home Page </h1>
+         <h2 style="text-align: center;"> Welcome to Austin Davis's Home Page </h1>
       </header>
+
+      <div>
+
+      </div>
    </div>
   </main>
 </div>
