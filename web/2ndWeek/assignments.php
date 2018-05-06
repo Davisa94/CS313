@@ -1,5 +1,5 @@
 <html>
-   <<?php require 'head.php'; ?>
+   <?php require 'head.php'; ?>
 
    <body>
       <div class="mdl-layout mdl-js-layout">
