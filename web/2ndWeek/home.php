@@ -6,19 +6,22 @@
 </head>
 
 <body>
-   <div class="mdl-layout mdl-navigation" id="nav">
-      <!-- Accent-colored raised button with ripple -->
-      <div class="mdl-layout__drawer">
-         Assignments
-         <a class="mdl-navigation__link" href="#">Week 01</a>
-         <a class="mdl-navigation__link" href="#">Week 02</a>
+   <div class="mdl-layout">
+      <div class="mdl-navigation" id="nav">
+         <!-- Accent-colored raised button with ripple -->
+         <div class="mdl-layout__drawer">
+            Assignments
+            <a class="mdl-navigation__link" href="#">Week 01</a>
+            <a class="mdl-navigation__link" href="#">Week 02</a>
+         </div>
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+           Assignments
+         </button>
       </div>
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Assignments
-      </button>
+      <header>
+      <h2 style="center;"> Welcome to Austin Davis's Home Page </h1>
+      </header>
    </div>
-   <header>
-   <h2 style="center;"> Welcome to Austin Davis's Home Page </h1>
-   </header>
+
 </body>
 </html>
