@@ -23,5 +23,9 @@ echo $name . "<br />";
 echo "<a href='mailto:" . $email . "'>" . $email ."</a> <br />";
 echo $major . "<br />";
 echo $comment;
-echo $continent;
+if(!empty($_POST['continent'])) {
+    foreach($_POST['continent'] as $check) {
+        echo $check;
+    }
+}
 ?>

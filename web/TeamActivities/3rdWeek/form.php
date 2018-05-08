@@ -21,7 +21,7 @@
 
    <input type="checkbox" name="continent" value="NA">North America
    <br />
-   <input type="checkbox" name="continent" value="SE">South America
+   <input type="checkbox" name="continent" value="SA">South America
    <br />
    <input type="checkbox" name="continent" value="EU">Europe
    <br />
