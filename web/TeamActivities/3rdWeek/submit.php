@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $comment = test_input($_POST["comment"]);
   $major = test_input($_POST["major"]);
-  $continent = test_input($_POST["continent"]);
+
 }
 
 function test_input($data) {
@@ -22,10 +22,12 @@ function test_input($data) {
 echo $name . "<br />";
 echo "<a href='mailto:" . $email . "'>" . $email ."</a> <br />";
 echo $major . "<br />";
-echo $comment;
-if(!empty($_POST['continent'])) {
-    foreach($_POST['continent'] as $check) {
-        echo $check;
-    }
-}
+echo $comment . "<br />";
+echo $_POST["NA"] . "<br />";
+echo $_POST["SA"] . "<br />";
+echo $_POST["EU"] . "<br />";
+echo $_POST["AS"] . "<br />";
+echo $_POST["AU"] . "<br />";
+echo $_POST["AF"] . "<br />";
+echo $_POST["AN"] . "<br />";
 ?>

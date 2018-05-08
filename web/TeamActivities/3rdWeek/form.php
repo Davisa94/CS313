@@ -19,19 +19,19 @@
    <input type="radio" name="major" value="CE">CE
    <br />
 
-   <input type="checkbox" name="continent" value="NA">North America
+   <input type="checkbox" name="NA" value="NA">North America
    <br />
-   <input type="checkbox" name="continent" value="SA">South America
+   <input type="checkbox" name="SA" value="SA">South America
    <br />
-   <input type="checkbox" name="continent" value="EU">Europe
+   <input type="checkbox" name="EU" value="EU">Europe
    <br />
-   <input type="checkbox" name="continent" value="AS">Asia
+   <input type="checkbox" name="AS" value="AS">Asia
    <br />
-   <input type="checkbox" name="continent" value="AU">Australia
+   <input type="checkbox" name="AU" value="AU">Australia
    <br />
-   <input type="checkbox" name="continent" value="AF">Africa
+   <input type="checkbox" name="AF" value="AF">Africa
    <br />
-   <input type="checkbox" name="continent" value="AN">Antartica
+   <input type="checkbox" name="AN" value="AN">Antartica
    <br />
    <br />
    <input type="submit" name="submit" value="submit">
