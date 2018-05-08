@@ -10,10 +10,10 @@
    <br />
    Major:
    <?php
-   // $majors = ["CS" => "Comnputer Science", "WDD", "CIT", "CE"]
-   $majors = ["CS", "WDD", "CIT", "CE"];
-      foreach ($majors as $value) {
-         echo "<input type=\"radio\" name=\"major\" value=\"" . $value . "\"/>" . $value;
+   $majors = ["CS" => "Comnputer Science", "WDD" => "Web Design", "CIT" => "Computer Information", "CE" => "Computer Engineering"]
+   //$majors = ["CS", "WDD", "CIT", "CE"];
+      foreach ($majors as $key => $value) {
+         echo "<input type=\"radio\" name=\"major\" value=\"" . $key . "\"/>" . $value;
       }
     ?>
    <br />
