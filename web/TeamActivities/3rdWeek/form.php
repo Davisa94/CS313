@@ -9,6 +9,12 @@
    <textarea name="comment" rows="5" cols="40"></textarea>
    <br />
    Major:
+   <?php
+   $majors = ["CS", "WDD", "CIT", "CE"]
+      foreach ($majors as $value) {
+         echo '<input type="radio" name="major" value="$value">' . $value
+      }
+    ?>
    <br />
    <input type="radio" name="major" value="CS">Computer Science
    <br />
