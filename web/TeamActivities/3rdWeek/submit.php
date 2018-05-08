@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $comment = test_input($_POST["comment"]);
   $major = test_input($_POST["major"]);
+  $continent = test_input($_POST["continent"]);
 }
 
 function test_input($data) {
@@ -22,4 +23,5 @@ echo $name . "<br />";
 echo "<a href='mailto:" . $email . "'>" . $email ."</a> <br />";
 echo $major . "<br />";
 echo $comment;
+echo $continent;
 ?>

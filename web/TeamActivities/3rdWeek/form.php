@@ -18,6 +18,22 @@
    <br />
    <input type="radio" name="major" value="CE">CE
    <br />
+
+   <input type="checkbox" name="continent" value="NA">North America
+   <br />
+   <input type="checkbox" name="continent" value="SE">South America
+   <br />
+   <input type="checkbox" name="continent" value="EU">Europe
+   <br />
+   <input type="checkbox" name="continent" value="AS">Asia
+   <br />
+   <input type="checkbox" name="continent" value="AU">Australia
+   <br />
+   <input type="checkbox" name="continent" value="AF">Africa
+   <br />
+   <input type="checkbox" name="continent" value="AN">Antartica
+   <br />
+   <br />
    <input type="submit" name="submit" value="submit">
 
 </form>
