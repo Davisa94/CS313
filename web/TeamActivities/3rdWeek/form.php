@@ -10,20 +10,21 @@
    <br />
    Major:
    <?php
+   // $majors = ["CS" => "Comnputer Science", "WDD", "CIT", "CE"]
    $majors = ["CS", "WDD", "CIT", "CE"]
       foreach ($majors as $value) {
-         echo '<input type="radio" name="major" value="$value">' . $value
+         echo "<input type=\"radio\" name=\"major\" value=\"" . $value . "\"/>" . $value;
       }
     ?>
    <br />
-   <input type="radio" name="major" value="CS">Computer Science
+   <!-- <input type="radio" name="major" value="CS">Computer Science
    <br />
    <input type="radio" name="major" value="WDD">WDD
    <br />
    <input type="radio" name="major" value="CIT">CIT
    <br />
    <input type="radio" name="major" value="CE">CE
-   <br />
+   <br /> -->
 
    <input type="checkbox" name="NA" value="NA">North America
    <br />
