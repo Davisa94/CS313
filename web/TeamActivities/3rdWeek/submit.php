@@ -18,9 +18,9 @@ function test_input($data) {
 
 
 
-echo $name . "<br />"
-echo "<a href=\"mailto:" . $email . "\"></a> <br />"
-echo $major . "<br />"
-echo $email . "<br />"
-echo $comment
+echo $name . "<br />";
+echo "<a href=\"mailto:" . $email . "\"></a> <br />";
+echo $major . "<br />";
+echo $email . "<br />";
+echo $comment;
 ?>
