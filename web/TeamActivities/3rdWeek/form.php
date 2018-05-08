@@ -1,5 +1,5 @@
 
-<form action="/submit.php" method="post">
+<form action="submit.php" method="post">
    Name: <input type="text" name="name">
    <br />
    E-mail: <input type="text" name="email">
