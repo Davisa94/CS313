@@ -51,7 +51,7 @@
                               <?php
                               #define days, years etc.
 
-                                 $started = strtotime('2016-9-25 9:00:00')
+                                 $started = strtotime('2016-9-25 9:00:00');
 
                                  function getTimeSince($timeStarted)
                                  {
