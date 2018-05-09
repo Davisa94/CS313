@@ -7,6 +7,7 @@
       <?php include 'homeButton.php'; ?>
       <?php include 'assignButton.php'; ?>
       <?php include 'aboutMeButton.php'; ?>
+      <?php include 'portfolioButton.php'; ?>
     </nav>
  </div>
 </header>
