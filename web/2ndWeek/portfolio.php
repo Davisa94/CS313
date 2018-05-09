@@ -45,16 +45,14 @@
                   <h3>Known Programming Languages</h3>
                   <div class="mdl-list nested skyBlue">
                      <ul class="mdl-list">
-                        <div class="nested steel">
+                        <div class="steel">
                            <li class="mdl-list__item">
-                                 C++ for
+                                 C++
                                  <?php
                                  #define days, years etc.
 
                                     $started = strtotime('2016-9-25 9:00:00');
 
-                                    function getTimeSince($timeStarted)
-                                    {
                                        $tokens = array (
                                           31536000 => 'year',
                                           2592000 => 'month',
@@ -72,31 +70,24 @@
                                           $numberOfUnits = floor($time / $unit);
                                           echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
                                           return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
-                                       }
-                                       echo "C++: 2 Years" . getTimeSince($started);
-                                    }
 
                                    ?>
                            </li>
                         </div>
-                        <div class="nested steel">
+                        <div class="blue">
                            <li class="mdl-list__item">
-                              <span class="mdl-list__item-primary-content">
                                  Python: 4 Years
-                              </span>
                            </li>
                         </div>
-                        <div class="nested steel">
+                        <div class="blue">
                            <li class="mdl-list__item">
-                              <span class="mdl-list__item-primary-content">
                                  Html: 2 Years
-                              </span>
                            </li>
                         </div>
-                        <div class="nested steel">
+                        <div class="blue">
                            JavaScript: 2 Years
                         </div>
-                        <div class="nested steel">
+                        <div class="blue">
                            Bash: 3 Years
                         </div>
 
