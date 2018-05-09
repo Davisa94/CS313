@@ -46,8 +46,7 @@
                   <div class="mdl-list nested gold-gradient">
                      <ul class="mdl-list">
                         <li class="mdl-list__item">
-                           <a class="mdl-list__item-primary-content mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../HelloWorld.php">
-                              C++ for four
+                              C++ for
                               <?php
                               #define days, years etc.
 
@@ -72,11 +71,10 @@
                                        $numberOfUnits = floor($time / $unit);
                                        return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
                                     }
-                                    echo getTimeSince($started);
+                                    echo "C++ for" . getTimeSince($started);
                                  }
 
                                 ?>
-                           </a>
                         </li>
                         <li class="mdl-list__item">
                            <a class="mdl-list__item-primary-content mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/home.php">
