@@ -69,6 +69,7 @@
                                     foreach ($tokens as $unit => $text) {
                                        if ($timeSince < $unit) continue;
                                        $numberOfUnits = floor($time / $unit);
+                                       echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
                                        return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
                                     }
                                     echo "C++ for" . getTimeSince($started);
