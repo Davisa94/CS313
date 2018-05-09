@@ -63,7 +63,7 @@
                                           1 => 'second'
                                           );
                                        $CurrentTime = time();
-                                       $startedC = $timeStarted;
+                                       $startedC = $started;
                                        $timeSince = $CurrentTime - $startedC;
                                        foreach ($tokens as $unit => $text) {
                                           if ($timeSince < $unit) continue;
