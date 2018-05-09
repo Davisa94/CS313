@@ -138,10 +138,21 @@ Career  */
 .nested{
    /*the nested grid can do everything the grid can*/
    display: grid;
-   grid-template-columns:repeat(1, 1fr);
+   grid-template-columns:repeat(3, 1fr);
    /*grid-template-columns: repeat(3, 1fr); */
 }
 
+.nested > div{
+   padding: 1em;
+   background: rgba(0, 85, 255, 0.1);
+   /* grid-column: 1/3; /*this stretches the box from coulumn one until column three
+   grid-row:1/3; /*this goes from row one until row 3*/
+}
+
+.nested > div:nth-child(odd)
+{
+   background: rgba(80, 0, 179, 0.06);
+}
 .nested-center{
    /*the nested grid can do everything the grid can*/
    display: grid;
