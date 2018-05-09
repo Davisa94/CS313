@@ -43,45 +43,63 @@
                </div>
                <div>
                   <h3>Known Programming Languages</h3>
-                  <div class="mdl-list nested gold-gradient">
+                  <div class="mdl-list nested skyBlue">
                      <ul class="mdl-list">
-                        <li class="mdl-list__item">
-                              C++ for
-                              <?php
-                              #define days, years etc.
+                        <div class="nested steel">
+                           <li class="mdl-list__item">
+                                 C++ for
+                                 <?php
+                                 #define days, years etc.
 
-                                 $started = strtotime('2016-9-25 9:00:00');
+                                    $started = strtotime('2016-9-25 9:00:00');
 
-                                 function getTimeSince($timeStarted)
-                                 {
-                                    $tokens = array (
-                                       31536000 => 'year',
-                                       2592000 => 'month',
-                                       604800 => 'week',
-                                       86400 => 'day',
-                                       3600 => 'hour',
-                                       60 => 'minute',
-                                       1 => 'second'
-                                       );
-                                    $CurrentTime = time();
-                                    $startedC = $timeStarted;
-                                    $timeSince = $CurrentTime - $startedC;
-                                    foreach ($tokens as $unit => $text) {
-                                       if ($timeSince < $unit) continue;
-                                       $numberOfUnits = floor($time / $unit);
-                                       echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
-                                       return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                                    function getTimeSince($timeStarted)
+                                    {
+                                       $tokens = array (
+                                          31536000 => 'year',
+                                          2592000 => 'month',
+                                          604800 => 'week',
+                                          86400 => 'day',
+                                          3600 => 'hour',
+                                          60 => 'minute',
+                                          1 => 'second'
+                                          );
+                                       $CurrentTime = time();
+                                       $startedC = $timeStarted;
+                                       $timeSince = $CurrentTime - $startedC;
+                                       foreach ($tokens as $unit => $text) {
+                                          if ($timeSince < $unit) continue;
+                                          $numberOfUnits = floor($time / $unit);
+                                          echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                                          return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                                       }
+                                       echo "C++: 2 Years" . getTimeSince($started);
                                     }
-                                    echo "C++ for" . getTimeSince($started);
-                                 }
 
-                                ?>
-                        </li>
-                        <li class="mdl-list__item">
-                           <a class="mdl-list__item-primary-content mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../2ndWeek/home.php">
-                              Week 02: Homepage
-                           </a>
-                        </li>
+                                   ?>
+                           </li>
+                        </div>
+                        <div class="nested steel">
+                           <li class="mdl-list__item">
+                              <span class="mdl-list__item-primary-content">
+                                 Python: 4 Years
+                              </span>
+                           </li>
+                        </div>
+                        <div class="nested steel">
+                           <li class="mdl-list__item">
+                              <span class="mdl-list__item-primary-content">
+                                 Html: 2 Years
+                              </span>
+                           </li>
+                        </div>
+                        <div class="nested steel">
+                           JavaScript: 2 Years
+                        </div>
+                        <div class="nested steel">
+                           Bash: 3 Years
+                        </div>
+
                      </ul>
                   </div>
                </div>
