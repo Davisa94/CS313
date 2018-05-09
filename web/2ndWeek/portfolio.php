@@ -69,7 +69,6 @@
                                           if ($timeSince < $unit) continue;
                                           $numberOfUnits = floor($time / $unit);
                                           echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
-                                          return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
 
                                    ?>
                            </li>
