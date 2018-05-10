@@ -52,8 +52,8 @@
                                     $started = strtotime('2016-9-25 9:00:00');
 
                                        $tokens = array (
-                                          31536000 => 'year',
-                                          2592000 => 'month',
+                                          31536000 => 'Year',
+                                          2592000 => 'Month',
                                           604800 => 'week',
                                           86400 => 'day',
                                           3600 => 'hour',
@@ -63,12 +63,25 @@
                                        $CurrentTime = time();
                                        $startedC = $started;
                                        $timeSince = $CurrentTime - $startedC;
+                                       $numberOfUnits = 0;
+                                       $year = 0;
                                        foreach ($tokens as $unit => $text) {
                                           if ($timeSince < $unit) continue;
                                           $numberOfUnits = floor($timeSince / $unit);
-                                          if($text == "year")
+                                          if($text == "Year")
                                           {
                                              echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                                             $year = $numberOfUnits
+
+                                          }
+                                          if($text == "Month")
+                                          {
+                                             $sub = $year * 12;
+                                             $month = $numberOfUnits - $sub
+                                             if($month >=2 )
+                                             {
+                                                echo $month.' '.$text.(($month>1)?'s':'');
+                                             }
                                           }
                                        }
 
