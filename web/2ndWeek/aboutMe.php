@@ -10,7 +10,7 @@
             <div class="grid">
                <div>
                   <h3>My Gaming Preferences</h3>
-                  <ul class="mdl-list nested gold-gradient">
+                  <ul class="mdl-list nested-center gold-gradient">
                      <li class="mdl-list__item">
 
                         <span class="mdl-list__item-primary-content content">
@@ -23,7 +23,7 @@
                </div>
                <div>
                   <h3>My Interests and Hobbies</h3>
-                  <ul class="mdl-list nested bronze-gradient">
+                  <ul class="mdl-list nested-center bronze-gradient">
                      <li class="mdl-list__item">
 
                         <span class="mdl-list__item-primary-content content">
@@ -36,7 +36,7 @@
                </div>
                <div>
                   <h3>My Career Aspirations</h3>
-                  <ul class="mdl-list nested pink-gradient">
+                  <ul class="mdl-list nested-center pink-gradient">
                      <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content content">
                            I want to work for a company that accepts peoples weaknesses and

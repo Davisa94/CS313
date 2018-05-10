@@ -15,9 +15,11 @@
                            Here is a link to a website created for a web
                            engineering course: <a href=https://davisa94.github.io/public_html/>Assignments</a>
                         </div>
+                        <br />
                         <div>
                            Here is my github: <a href="https://davisa94.github.com"> My Code </a>
                         </div>
+                        <br />
                         <div>
                            The Repository for this very website: <a href="https://github.com/Davisa94/CS313"> This Site </a>
                         </div>
