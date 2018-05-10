@@ -44,9 +44,7 @@
                <div>
                   <h3>Some Known Programming Languages</h3>
                   <div class="mdl-list nested skyBlue">
-                     <ul class="mdl-list">
                         <div class="steel">
-                           <li class="mdl-list__item">
                                  C++
                                  <?php
                                  #define days, years etc.
@@ -75,27 +73,21 @@
                                        }
 
                                    ?>
-                           </li>
                         </div>
                         <div class="blue">
-                           <li class="mdl-list__item">
                                  Python: 4 Years
-                           </li>
                         </div>
                         <div class="blue">
-                           <li class="mdl-list__item">
                                  Html: 2 Years
-                           </li>
                         </div>
                         <div class="blue">
-                           <li class="mdl-list__item">
                            JavaScript: 2 Years
-                           </li>
                         </div>
                         <div class="blue">
-                           <li class="mdl-list__item">
                            Bash: 3 Years
-                           </li>
+                        </div>
+                        <div class="blue">
+                           CSS: 3 Years
                         </div>
 
                      </ul>
