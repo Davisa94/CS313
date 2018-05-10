@@ -75,6 +75,14 @@ Career  */
    font-family: "Bookman", serif;
 }
 
+.steel{
+   background: rgba(70, 111, 154, 0.47);
+   font-family: "Bookman", serif;
+}
+.blue{
+   background: rgba(0, 35, 161, 0.47);
+   font-family: "Bookman", serif;
+}
 .bronze-gradient{
    background: rgba(209, 119, 37, 0.59);
    background: -moz-linear-gradient(left, rgba(214, 139, 70, 0.32) 0%, rgba(209, 119, 37, 0.59) 50%, rgba(214, 139, 70, 0.32) 100%);

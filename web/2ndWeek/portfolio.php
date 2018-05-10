@@ -10,7 +10,7 @@
             <div class="grid">
                <div>
                   <h3>Academic Accomplishments</h3>
-                  <div class="nested">
+                  <div class="nested-center">
                         <span>
                            Here is a link to a website created for a web
                            engineering course: <a href=https://davisa94.github.io/public_html/>Assignments</a>
@@ -19,30 +19,30 @@
                </div>
                <div>
                   <h3>Religious Presentation: Ten Truths of The Restoration</h3>
-                  <div class="nested gold-gradient">
+                  <div class="nested-center gold-gradient">
                      <iframe width="560" height="315" src="https://www.youtube.com/embed/LuTGWsTRmH8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>
                </div>
                <div>
                   <h3>3D Modeling/Animation: Crystal</h3>
-                  <div class="nested gold-gradient">
+                  <div class="nested-center gold-gradient">
                      <iframe width="560" height="315" src="https://www.youtube.com/embed/OMVwMctDZqg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>
                </div>
                <div>
                   <h3>3D Animation/Art: #1</h3>
-                  <div class="nested gold-gradient">
+                  <div class="nested-center gold-gradient">
                      <iframe width="560" height="315" src="https://www.youtube.com/embed/EkeyQe35TDE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>
                </div>
                <div>
                   <h3>3D Animation: Mapped object to music</h3>
-                  <div class="nested gold-gradient">
+                  <div class="nested-center gold-gradient">
                      <iframe width="560" height="315" src="https://www.youtube.com/embed/xzsCBf8zpXY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>
                </div>
                <div>
-                  <h3>Known Programming Languages</h3>
+                  <h3>Some Known Programming Languages</h3>
                   <div class="mdl-list nested skyBlue">
                      <ul class="mdl-list">
                         <div class="steel">
@@ -68,7 +68,7 @@
                                        foreach ($tokens as $unit => $text) {
                                           if ($timeSince < $unit) continue;
                                           $numberOfUnits = floor($timeSince / $unit);
-                                          if($text == "Year")
+                                          if($text == "year")
                                           {
                                              echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
                                           }
@@ -88,10 +88,14 @@
                            </li>
                         </div>
                         <div class="blue">
+                           <li class="mdl-list__item">
                            JavaScript: 2 Years
+                           </li>
                         </div>
                         <div class="blue">
+                           <li class="mdl-list__item">
                            Bash: 3 Years
+                           </li>
                         </div>
 
                      </ul>
