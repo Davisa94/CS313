@@ -71,13 +71,13 @@
                                           if($text == "Year")
                                           {
                                              echo $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
-                                             $year = $numberOfUnits
+                                             $year = $numberOfUnits;
 
                                           }
                                           if($text == "Month")
                                           {
                                              $sub = $year * 12;
-                                             $month = $numberOfUnits - $sub
+                                             $month = $numberOfUnits - $sub;
                                              if($month >=2 )
                                              {
                                                 echo $month.' '.$text.(($month>1)?'s':'');
