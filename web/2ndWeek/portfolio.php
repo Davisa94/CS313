@@ -11,10 +11,16 @@
                <div>
                   <h3>Academic Accomplishments</h3>
                   <div class="nested-center">
-                        <span>
+                        <div>
                            Here is a link to a website created for a web
                            engineering course: <a href=https://davisa94.github.io/public_html/>Assignments</a>
-                        </span>
+                        </div>
+                        <div>
+                           Here is my github: <a href="https://davisa94.github.com"> My Code </a>
+                        </div>
+                        <div>
+                           The Repository for this very website: <a href="https://github.com/Davisa94/CS313"> This Site </a>
+                        </div>
                   </div>
                </div>
                <div>
@@ -80,7 +86,7 @@
                                              $month = $numberOfUnits - $sub;
                                              if($month >=2 )
                                              {
-                                                echo $month.' '.$text.(($month>1)?'s':'');
+                                                echo ', '.$month.' '.$text.(($month>1)?'s':'');
                                              }
                                           }
                                        }
