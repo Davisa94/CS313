@@ -6,9 +6,6 @@
     <nav class="mdl-navigation">
       <?php include 'homeButton.php'; ?>
       <?php include 'assignButton.php'; ?>
-      <?php include 'aboutMeButton.php'; ?>
-      <?php include 'portfolioButton.php'; ?>
-      <?php include 'storeFrontButton.php'; ?>
     </nav>
  </div>
 </header>
