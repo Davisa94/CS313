@@ -7,18 +7,18 @@ echo "<html>
    $sample_url = "/header.php";
    $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
    echo $url;
-   $active = ""
+   $active = "";
    if(strpos($url, 'about_us') !== false)
    {
-      $active = "about_us"
+      $active = "about_us";
    }
    if(strpos($url, 'home') !== false)
    {
-      $active = "home"
+      $active = "home";
    }
    if(strpos($url, 'login') !== false)
    {
-      highlight header
+      "highlight header";
    }
    echo "
    </body>

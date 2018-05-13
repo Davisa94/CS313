@@ -11,23 +11,22 @@
   <main class="mdl-layout__content" id="store">
       <h3>A Little More About Me</h3>
       <div class="grid">
-          <div>
-             <h3>Academic Accomplishments</h3>
-             <div class="nested-center">
-                   <div>
-                      Here is a link to a website created for a web
-                      engineering course: <a href=https://davisa94.github.io/public_html/>Assignments</a>
-                   </div>
-                   <br />
-                   <div>
-                      Here is my github: <a href="https://davisa94.github.com"> My Code </a>
-                   </div>
-                   <br />
-                   <div>
-                      The Repository for this very website: <a href="https://github.com/Davisa94/CS313"> This Site </a>
-                   </div>
-             </div>
-          </div>
+         <?php
+         $string = file_get_contents("cards.json");
+         $cards = json_decode($string, true);
+           foreach ($cards as $card) {
+             $img = $card["image"];
+             $name = $card["name"];
+             echo "<div>
+                       <h3>$name</h3>
+                       <img src=$img onmouseover=$name />
+                       <div id=\"options\" nested-center gold-gradient>
+
+                       </div>
+                    </div>";
+
+           };
+          ?>
           <div>
              <h3>Religious Presentation: Ten Truths of The Restoration</h3>
              <div class="nested-center gold-gradient">

@@ -1,6 +1,6 @@
 <?php
 $name = 'color';
-$value = 'blue'
+$value = 'blue';
 
    #start session:
    session_start();
