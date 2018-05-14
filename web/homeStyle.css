@@ -2,7 +2,7 @@
 Career  */
 
 #main{
-   background-image: url("img/potato-field-1.jpg");
+   background-image: url("/img/potato-field-1.jpg");
    height: 100%;
    background-position: center;
    background-repeat: no-repeat;
@@ -208,12 +208,33 @@ Career  */
 {
    background: rgba(80, 0, 179, 0.06);
 }
+
 .nested-center{
    /*the nested grid can do everything the grid can*/
    display: grid;
    grid-template-columns:repeat(1, 1fr);
    justify-content: center;
    /*grid-template-columns: repeat(3, 1fr); */
+}
+
+#info .nested-center{
+   /*the nested grid can do everything the grid can*/
+   display: grid;
+   grid-template-columns:repeat(2, 1fr);
+   justify-content: center;
+   /*grid-template-columns: repeat(3, 1fr); */
+}
+
+#info .nested-center > div{
+   padding: 1em;
+   background: rgba(0, 85, 255, 0.1);
+   /* grid-column: 1/3; /*this stretches the box from coulumn one until column three
+   grid-row:1/3; /*this goes from row one until row 3*/
+}
+
+#info .nested-center > div:nth-child(odd)
+{
+   background: rgba(80, 0, 179, 0.06);
 }
 
 .-left{
