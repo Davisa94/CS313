@@ -1,0 +1,27 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+https://still-dawn-61366.herokuapp.com/3rdWeek/Store.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/Davisa94/CS313
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+Items are dynamically created and added to storefront pulled from a json file. Item attributes are dynamically pulled from json and added to cart based upon Session cart elements including a dynamic subtotal and overall total.
+
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+These are stretches but two things I would like to do is add a snackbar toast everytime an item is added to the cart, the other is implement an in-stock amount for each item.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+You can dynamically create elements from php using an array
+
+6. List one strength and one limitation of using cookies.
+Strength its quick and easy to use and get started, a weakness is you are at the mercy of the user deleting their cookies which would destroy any data saved there.
+
+7. Please select the category you feel best describes your assignment:
+E - Shows creativity and excels above and beyond requirements
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I Put a lot of time and effort into the store and got dynamic totals and sub-totals working. I also made the php redirects more robust using HTTP_REFERER. Furthermore, I added Cohesive style and though I'm not a designer I feel it looks good and a far sight better than it looked before. 

@@ -2,6 +2,17 @@
 
 
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// if(session_id() == '') {
+//     session_start();
+// }
+   #USE SESSION:
+
+
+
    require 'head.php';
  ?>
 
@@ -14,40 +25,22 @@
       <h3>Just Another Magic Store</h3>
       <div class="grid">
          <?php
-         session_start();
-         $name = $_POST["name"];
-         $cart = $_SESSION["cart"][$name];
          $string = file_get_contents("cards.json");
          $cards = json_decode($string, true);
-          $total = 0;
            foreach ($cards as $card) {
              $img = $card["image"];
              $name = (string)$card["name"];
-
-             $price = $card["Price"];
-            $price = number_format((float)$card["Price"],2);
-
-
-             if(array_key_exists($name,$_SESSION['cart']))
-             {
-              $quantity = $_SESSION["cart"][$name];
-              $subTotal = ($price * $quantity);
-              $subTotal = number_format((float)$subTotal,2);
-              $total+= $subTotal;
-              $total = number_format((float)$total,2);
-
+             $quantity = $card["Quantity"];
+             $price = number_format((float)$card["Price"],2);
              echo "<div>
                   <form action=\"addToCart.php\" method=\"post\">
 
 
                        <h3>$name</h3>
-                       <img src=$img onmouseover=$name />
-                       <div class=\"nested-small\">
+                       <img src=$img onmouseover=($name) />
+                       <div class=\"nested-center\">
                            <div>
-                              Quantity: $quantity
-                           </div>
-                           <div>
-                              Sub: $$subTotal
+                              Price: $$price
                            </div>
                        </div>
                            <div>
@@ -65,27 +58,14 @@
 
                     </form>
                     </div>";
-                 }
+
            };
-           echo "
-          <div>
-             Total: $$total
-          </div>";
-          echo "
+          ?>
 
-          <form method=\"post\">
-         <h4>Enter Your Shipping Address</h4>
-          <input type=\"text\" name=\"address\" value=\"\"/>
-
-          <button type=\"submit\"
-          formaction=\"Check.php\">Checkout</button>
-
-          </form>"
-             ?>
           </div>
           <a class = "mdl-button mdl-js-button
           mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          href="Store.php">Go To Store</a>
+          href="cart.php">Go To Cart</a>
           </div>
    </main>
 </div>

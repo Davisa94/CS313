@@ -16,6 +16,7 @@
          <?php
          session_start();
          $name = $_POST["name"];
+         $address = $_POST['address'];
          $cart = $_SESSION["cart"][$name];
          $string = file_get_contents("cards.json");
          $cards = json_decode($string, true);
@@ -34,12 +35,10 @@
               $subTotal = ($price * $quantity);
               $subTotal = number_format((float)$subTotal,2);
               $total+= $subTotal;
+              $total += 5;
               $total = number_format((float)$total,2);
 
              echo "<div>
-                  <form action=\"addToCart.php\" method=\"post\">
-
-
                        <h3>$name</h3>
                        <img src=$img onmouseover=$name />
                        <div class=\"nested-small\">
@@ -50,17 +49,6 @@
                               Sub: $$subTotal
                            </div>
                        </div>
-                           <div>
-                           <form class=\"nested-small\" action=\"addToCart.php\" method=\"post\">
-                           <button type=\"submit\"
-                           formaction=\"addToCart.php\">Add To Cart</button>
-                           <button type=\"submit\"
-                           formaction=\"removeCart.php\">Remove From Cart</button>
-                           <input type=\"hidden\" name=\"name\" value=\"$name\"/>
-                           <input type=\"hidden\" name=\"Quantity\" value=\"$quantity\"/>
-                           <input type=\"hidden\" name=\"Quantity\" value=\"$price\"/>
-                           </form>
-                           </div>
 
 
                     </form>
@@ -68,19 +56,23 @@
                  }
            };
            echo "
-          <div>
-             Total: $$total
+          <div class=\"nested-small\">
+             <div>
+               Your Total cost with shipping is : $$total
+             </div>
+             <div>
+                          Your Shipping cost is: $5.00;
+             </div>
+             <div>
+                          Your address is: $address
+             </div>
+             </div>
+           <a class = \"mdl-button mdl-js-button
+           mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
+           href=\"confirm.php\">Confirm and pay</a>
+           </div>
+
           </div>";
-          echo "
-
-          <form method=\"post\">
-         <h4>Enter Your Shipping Address</h4>
-          <input type=\"text\" name=\"address\" value=\"\"/>
-
-          <button type=\"submit\"
-          formaction=\"Check.php\">Checkout</button>
-
-          </form>"
              ?>
           </div>
           <a class = "mdl-button mdl-js-button
