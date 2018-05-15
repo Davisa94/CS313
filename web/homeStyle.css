@@ -191,6 +191,15 @@ Career  */
    /*grid-template-columns: repeat(3, 1fr); */
 }
 
+.nested-small{
+   /*the nested grid can do everything the grid can*/
+   display: grid;
+   grid-template-columns:repeat(2, 1fr);
+   font-size: 75%;
+
+   /*grid-template-columns: repeat(3, 1fr); */
+}
+
 #store .nested{
    /*the nested grid can do everything the grid can*/
    display: grid;
