@@ -38,10 +38,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                        <h3>$name</h3>
                        <img src=$img onmouseover=($name) />
-                       <div class=\"nested-small\">
-                           <div>
-                              Quantity: $quantity
-                           </div>
+                       <div class=\"nested-center\">
                            <div>
                               Price: $$price
                            </div>
