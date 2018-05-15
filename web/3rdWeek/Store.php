@@ -29,21 +29,21 @@ if (session_status() == PHP_SESSION_NONE) {
          $cards = json_decode($string, true);
            foreach ($cards as $card) {
              $img = $card["image"];
-             $name = $card["name"];
+             $name = (string)$card["name"];
              $quantity = $card["Quantity"];
-             $price = $card["Price"];
+             $price = number_format((float)$card["Price"],2);
              echo "<div>
                   <form action=\"addToCart.php\" method=\"post\">
 
 
                        <h3>$name</h3>
-                       <img src=$img onmouseover=$name />
+                       <img src=$img onmouseover=($name) />
                        <div class=\"nested-small\">
                            <div>
                               Quantity: $quantity
                            </div>
                            <div>
-                              Price: $price
+                              Price: $$price
                            </div>
                        </div>
                            <div>

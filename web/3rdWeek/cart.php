@@ -22,16 +22,19 @@
           $total = 0;
            foreach ($cards as $card) {
              $img = $card["image"];
-             $name = $card["name"];
+             $name = (string)$card["name"];
 
              $price = $card["Price"];
+            $price = number_format((float)$card["Price"],2);
 
 
              if(array_key_exists($name,$_SESSION['cart']))
              {
               $quantity = $_SESSION["cart"][$name];
               $subTotal = ($price * $quantity);
+              $subTotal = number_format((float)$subTotal,2);
               $total+= $subTotal;
+              $total = number_format((float)$total,2);
 
              echo "<div>
                   <form action=\"addToCart.php\" method=\"post\">
@@ -44,7 +47,7 @@
                               Quantity: $quantity
                            </div>
                            <div>
-                              Sub Total: $$subTotal
+                              Sub: $$subTotal
                            </div>
                        </div>
                            <div>
