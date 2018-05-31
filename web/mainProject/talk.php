@@ -20,7 +20,7 @@
   $statement->execute();
   $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
   echo "<form action=\"talk.php\" method=\"POST\">";
-  foreach $response in $responses{
+  foreach ($response in $responses){
     $body = $response['body'];
     $next_id = $response['next_dialouge_id'];
     echo "<button type=\"submit\" name=\"$next_id\">$body</span>";
