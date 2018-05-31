@@ -1,4 +1,4 @@
-create table "characters"
+create table characters
 (
    id SERIAL PRIMARY KEY,
    name VARCHAR(250) NOT NULL,
