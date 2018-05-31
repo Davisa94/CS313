@@ -16,7 +16,7 @@
       </header>
 
       <div>
-        <form>
+        <form method="POST" action="talk.php">
 
         <?php
             $dbUrl = getenv('DATABASE_URL');
@@ -31,9 +31,9 @@
 
 
             foreach ($db->query('SELECT id, name FROM "character"') as $row) {
-            		echo "<a class = \"mdl-button mdl-js-button
+            		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-                name = \"character\" href=\"talk.php\">$row['name']</a>";
+                name = \"character\" type = \"submit\" href=\"talk.php\">$row['name']</button>";
             }
         ?>
         </form>
