@@ -29,7 +29,7 @@
 
             foreach ($db->query('SELECT id, name FROM character') as $row) {
             		echo '<span style="font-weight: bold;">';
-            		echo $row['name'] '</span>';
+            		echo $row['name'] . '</span>';
             		echo '<br/>';
             }
         ?>
