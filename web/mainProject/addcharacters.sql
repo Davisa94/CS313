@@ -1,10 +1,13 @@
-insert into characters (name, location)
-  values (Nephi, Home),
-         (Lehi, Home),
-         (Sariah, Home),
-         (Laban, Jerusalem),
-         (Lemuel, Home),
-         (Laman, Home);
+insert into character (name, locationID)
+  values ('Nephi', 1),
+         ('Lehi', 1),
+         ('Sariah', 1),
+         ('Laban', 2),
+         ('Lemuel', 1),
+         ('Laman', 1);
+insert into location(name)
+  values ('Home'),
+         ('Jerusalem');
 
   create table characters
   (
