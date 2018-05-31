@@ -33,7 +33,7 @@
             foreach ($db->query('SELECT id, name FROM "character"') as $row) {
             		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-                name = \"character\" type=\"submit\" href=\"talk.php\">" .
+                name = \"character\" type=\"submit\"". $row['name'] . "href=\"talk.php\">" .
                 $row['name'] . "</button>";
             }
         ?>
