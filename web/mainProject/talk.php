@@ -10,5 +10,5 @@
   $statement->execute();
   $row = $statement->fetch();
 
-  echo $row;
+  echo $row['body'];
 ?>
