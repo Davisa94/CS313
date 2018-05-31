@@ -27,7 +27,7 @@
             $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            foreach ($db->query('SELECT id, name FROM character') as $row) {
+            foreach ($db->query('SELECT id, name FROM "character"') as $row) {
             		echo '<span style="font-weight: bold;">';
             		echo $row['name'] . '</span>';
             		echo '<br/>';
