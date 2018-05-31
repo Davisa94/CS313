@@ -1,0 +1,10 @@
+#Data type serial automagically adds the right number and NOT NULL
+
+Commands:
+heroku pg:psql
+copy, paste, enter
+Dropping Tables:
+drop TABLE "tablename"
+insert Statment:
+INSERT INTO tablename(column1, column2, column3, column3) VALUES('Color Run', 'Awesome event center', '2018-07-20')
+insert into event(name, location, "date") VALUES('Turkey Trot', 'Porter Park', NULL)

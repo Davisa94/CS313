@@ -1,0 +1,11 @@
+1. Create tables in DB
+  a. creatre .sql file for creating the tables
+    1. drop existing tables
+    2. create the new ones
+2. Add 2 Characters to DB
+3. add one interaction(greeting)[tier 1] to each Character in the DB
+4. Design the Home to display a welcome message instructing users to choose a character to speak with
+5. foreach character in the Character Table display their name as a button
+6. Add one character to the db
+7. Each time you talk to a character add one to the happiness/relationship value of that character(changed later)
+8.

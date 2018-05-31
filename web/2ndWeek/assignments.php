@@ -24,6 +24,11 @@
                      Week 03: Store
                   </a>
                </li>
+               <li class="mdl-list__item">
+                  <a class="mdl-list__item-primary-content mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="../mainProject/home.php">
+                     Week 04-07: Story
+                  </a>
+               </li>
             </ul>
          </main>
       </div>
