@@ -9,6 +9,19 @@ insert into location(name)
   values ('Home'),
          ('Jerusalem');
 
+insert into character_dialouge(user_response_group_id, body, character_id)
+  values(1, 'Hello',
+    (select id From character where name = 'Nephi'));
+
+
+  create table character_dialouge
+  (
+     id SERIAL PRIMARY KEY,
+     user_response_group_id SMALLINT references user_response_group(id),
+     body text NOT NULL,
+     character_id SMALLINT references character(id)
+  );
+
   create table characters
   (
      id SERIAL PRIMARY KEY,

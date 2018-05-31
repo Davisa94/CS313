@@ -36,10 +36,18 @@ create table user_response
   id serial primary key,
   character_id SMALLINT references character(id),
   body text NOT NULL,
-  user_response_group_id SMALLINT,
+  character_dialouge_id SMALLINT references character_dialouge(id),
+  next_dialouge_id SMALLINT references character_dialouge(id),
   relationship_modifier SMALLINT DEFAULT 1
 );
 
+user table and user relationship table:
+UID
+name
+
+UID
+CID
+Relationship
 
 create table user_response_group
   (
@@ -49,17 +57,24 @@ create table user_response_group
     response_level SMALLINT
   );
 
+
 -- modify user response add FK
 ALTER TABLE user_response
   ADD CONSTRAINT fk_user_response_group_id
   FOREIGN KEY (user_response_group_id)
   REFERENCES user_response_group(id);
 
+ALTER TABLE character_dialouge
+  DROP CONSTRAINT character_dialouge_user_response_group_id_fkey;
+
+ALTER TABLE character_dialouge
+  ADD CONSTRAINT fk_cd_user_response_group_id
+  FOREIGN KEY (user_response_group_id)
+  REFERENCES user_response_group(id);
 
 create table character_dialouge
 (
    id SERIAL PRIMARY KEY,
-   user_response_group_id SMALLINT references user_response_group(id),
    body text NOT NULL,
    character_id SMALLINT references character(id)
 );
