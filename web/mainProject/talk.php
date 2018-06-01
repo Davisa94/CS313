@@ -1,4 +1,6 @@
 <?php
+
+// https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes
 // TODO: Change this to look up the given dialouge_id
   require 'dbConnect.php';
   $id = htmlspecialchars($_POST['character']);
@@ -20,7 +22,7 @@
   $statement->execute();
   $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
   echo "<form action=\"talk.php\" method=\"POST\">";
-  foreach ($response in $responses){
+  foreach ($responses as $response){
     $body = $response['body'];
     $next_id = $response['next_dialouge_id'];
     echo "<button type=\"submit\" name=\"$next_id\">$body</span>";

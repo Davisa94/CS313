@@ -6,6 +6,7 @@ create table characters
    locationID VARCHAR(150) NOT NULL
 );
 
+
 create table participant
 (
    id SERIAL PRIMARY KEY,
