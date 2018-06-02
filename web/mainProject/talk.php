@@ -28,6 +28,6 @@
     $next_id = $response['next_dialouge_id'];
     echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
   };
-  echo "<button href='home.php'>Bye!</button>"
+  echo "<button href='home.php'>Bye!</button>";
   echo "</form>";
 ?>
