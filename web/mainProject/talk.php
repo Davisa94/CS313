@@ -7,7 +7,7 @@
 
 
    <?php
-   echo "<div class=\"-center\">";
+
    // TODO: Add the sourounding html Tags and the header info and such
    // https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes
    // Create the db object
@@ -21,8 +21,31 @@
      $statement->bindValue(":id", $id, PDO::PARAM_INT);
      $statement->execute();
      $row = $statement->fetch();
+     //fetch character Name
+     $query = "select character_id FROM character_dialouge WHERE id = :id";
+
+     $statement = $db->prepare($query);
+     $statement->bindValue(":id", $id, PDO::PARAM_INT);
+     $statement->execute();
+     $row2 = $statement->fetch();
+     $character_id = $row2['character_id'];
+    //We have the character ID, now lets get the name attached to that;
+    $query = "select name FROM character WHERE id = :id";
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(":id", $character_id, PDO::PARAM_INT);
+    $statement->execute();
+    $row2 = $statement->fetch();
+    $name = $row2['name'];
+
+     echo "<div class=\"-right\">
+       <h2>Speaking To:</h2>
+       <p>$name</p>
+     </div>";
    //display the body TODO: Make this look fancier, maybe centered with a picture of the character
+    echo "<div class=\"-center\">";
      echo $row['body'];
+    echo "</div>";
    //This builds a query to select the info from user_response that corresponds to the given dialouge ID
      $query = "select id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
      $start_id = $row['id'];
@@ -30,9 +53,9 @@
      $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
      $statement->execute();
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo "</div>";
+
    //This displays each availiable response TODO: Make this look fancier
-echo "<div \"-center\">";
+echo "<div \"-right\">";
 
      echo "<form onsubmit=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
