@@ -30,5 +30,5 @@
     echo "<br />";
   };
   echo "</form>";
-  echo "<button href='home.php'>Bye!</button>";
+  echo "<button href=\"home.php\">Bye!</button>";
 ?>
