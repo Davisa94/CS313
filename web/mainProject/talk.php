@@ -31,13 +31,15 @@
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialouge_id'];
-       echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
+       echo "<button class = \"mdl-button mdl-js-button
+       mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
+       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
        echo "<br />";
      };
      echo "</form>";
      echo "<a class = \"mdl-button mdl-js-button
      mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-     href=\"home.php\">Go To Cart</a>";
+     href=\"home.php\">Bye!</a>";
    ?>
  </body>
 
