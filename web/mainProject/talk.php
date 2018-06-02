@@ -38,7 +38,7 @@
     $row2 = $statement->fetch();
     $name = $row2['name'];
 
-     echo "<div class=\"-right\">
+     echo "<div class=\"-left\">
        <h2>Speaking To:</h2>
        <p>$name</p>
      </div>";
