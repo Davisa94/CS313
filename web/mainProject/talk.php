@@ -22,12 +22,13 @@
   $statement->execute();
   $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
 //This displays each availiable response TODO: Make this look fancier
-  echo "<form action=\"talk.php\" method=\"POST\">";
+  echo "<form onsubmit=\"talk.php\" method=\"POST\">";
   foreach ($responses as $response){
     $body = $response['body'];
     $next_id = $response['next_dialouge_id'];
     echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
+    echo "<br />";
   };
-  echo "<button href='home.php'>Bye!</button>";
   echo "</form>";
+  echo "<button href='home.php'>Bye!</button>";
 ?>
