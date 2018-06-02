@@ -13,7 +13,7 @@
   $statement->execute();
   $row = $statement->fetch();
 
-  echo $row['body'];
+  echo $row['body'] . 'Why no work?';
 
   $query = "select id, body, next_dialouge_id, FROM user_response WHERE character_dialouge_id = :id";
 
@@ -22,9 +22,6 @@
   $statement->execute();
   $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
   echo $responses;
-  foreach $responses as $response{
-    echo $response;
-  }
   echo "<form action=\"talk.php\" method=\"POST\">";
   foreach ($responses as $response){
     $body = $response['body'];
