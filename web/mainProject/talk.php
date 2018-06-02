@@ -7,7 +7,7 @@
 
 
    <?php
-   echo "<div>";
+   echo "<div class=\"-center\">";
    // TODO: Add the sourounding html Tags and the header info and such
    // https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes
    // Create the db object
@@ -32,7 +32,7 @@
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
     echo "</div>";
    //This displays each availiable response TODO: Make this look fancier
-echo "<div>";
+echo "<div \"-center\">";
 
      echo "<form onsubmit=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
