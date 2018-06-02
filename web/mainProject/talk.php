@@ -26,7 +26,8 @@
   foreach ($responses as $response){
     $body = $response['body'];
     $next_id = $response['next_dialouge_id'];
-    echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</span>";
+    echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
   };
+  echo "<button href='home.php'>Bye!</button>"
   echo "</form>";
 ?>
