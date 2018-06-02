@@ -7,6 +7,7 @@
 
 
    <?php
+   echo "<div>";
    // TODO: Add the sourounding html Tags and the header info and such
    // https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes
    // Create the db object
@@ -29,6 +30,7 @@
      $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
      $statement->execute();
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo "</div>";
    //This displays each availiable response TODO: Make this look fancier
 echo "<div>";
 
@@ -36,11 +38,9 @@ echo "<div>";
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialouge_id'];
-       echo "<div class=\"nested-center\">
-       <button class = \"mdl-button mdl-js-button
+       echo "<button class = \"mdl-button mdl-js-button
        mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>
-       </div>";
+       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
        echo "<br />";
      };
      echo "</form>";
