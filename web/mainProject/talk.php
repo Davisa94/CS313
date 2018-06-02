@@ -21,6 +21,7 @@
   $statement->bindValue(":id", $row['id'], PDO::PARAM_INT);
   $statement->execute();
   $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
+  echo $responses;
   echo "<form action=\"talk.php\" method=\"POST\">";
   foreach ($responses as $response){
     $body = $response['body'];
