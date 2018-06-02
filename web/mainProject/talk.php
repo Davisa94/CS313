@@ -6,14 +6,14 @@
   $id = htmlspecialchars($_POST['character']);
   $db = get_db();
 
-  $query = "select body, id FROM character_dialouge WHERE character_id = :id";
+  $query = "select body, id FROM character_dialouge WHERE id = :id";
 
   $statement = $db->prepare($query);
   $statement->bindValue(":id", $id, PDO::PARAM_INT);
   $statement->execute();
   $row = $statement->fetch();
 
-  echo $row['body'] . 'Why no work?';
+  echo $row['body'];
 
   $query = "select id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
   $start_id = $row['id'];
@@ -28,6 +28,5 @@
     $next_id = $response['next_dialouge_id'];
     echo "<button type=\"submit\" name=\"character\" value=\"$next_id\">$body</span>";
   };
-  echo "why dont you work";
   echo "</form>";
 ?>
