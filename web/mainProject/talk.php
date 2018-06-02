@@ -3,6 +3,9 @@
    require 'head.php';
  ?>
  <body>
+   <div class = "grid">
+
+
    <?php
    // TODO: Add the sourounding html Tags and the header info and such
    // https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes
@@ -27,20 +30,27 @@
      $statement->execute();
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
    //This displays each availiable response TODO: Make this look fancier
+echo "<div>"
+
      echo "<form onsubmit=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialouge_id'];
-       echo "<button class = \"mdl-button mdl-js-button
+       echo "<div class=\"nested-center\">
+       <button class = \"mdl-button mdl-js-button
        mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
+       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>
+       </div>";
        echo "<br />";
      };
      echo "</form>";
      echo "<a class = \"mdl-button mdl-js-button
      mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
      href=\"home.php\">Bye!</a>";
+
+   </div>
    ?>
+      </div>
  </body>
 
 </html>
