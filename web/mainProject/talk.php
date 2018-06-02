@@ -14,10 +14,8 @@
   $row = $statement->fetch();
 
   echo $row['body'] . 'Why no work?';
-  ?>
-  
-  <?php
-  $query = "select id, body, next_dialouge_id, FROM user_response WHERE character_dialouge_id = :id";
+
+  $query = "select id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
   $start_id = $row['id'];
   $statement = $db->prepare($query);
   $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
