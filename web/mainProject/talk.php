@@ -30,7 +30,7 @@
      $statement->execute();
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
    //This displays each availiable response TODO: Make this look fancier
-echo "<div>"
+echo "<div>";
 
      echo "<form onsubmit=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
@@ -48,7 +48,7 @@ echo "<div>"
      mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
      href=\"home.php\">Bye!</a>";
 
-   </div>
+   echo "</div>";
    ?>
       </div>
  </body>
