@@ -36,7 +36,7 @@
               $statement = $db->prepare($query);
               $statement->bindValue(":cid", $start_id, PDO::PARAM_INT);
               $statement->execute();
-              $dialouge = $statement->fetchAll(PDO::FETCH_ASSOC);
+              $dialouge = $statement->fetch();
               echo "id: " . $dialouge['id'];
               echo "Statment: " . $statment;
             		echo "<button class = \"mdl-button mdl-js-button
