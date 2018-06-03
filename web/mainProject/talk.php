@@ -47,7 +47,7 @@
      echo $row['body'];
     echo "</div>";
    //This builds a query to select the info from user_response that corresponds to the given dialouge ID
-     $query = "select id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
+     $query = "SELECT id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
      $start_id = $row['id'];
      $statement = $db->prepare($query);
      $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
