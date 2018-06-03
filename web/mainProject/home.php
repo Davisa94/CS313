@@ -36,9 +36,10 @@
               $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
               $statement->execute();
               $dialouge = $statement->fetchAll(PDO::FETCH_ASSOC);
+              echo $dialouge
             		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-                name = \"character\" type=\"submit\" value=\"". $statement['id'] . "\" href=\"talk.php\">" .
+                name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk.php\">" .
                 $row['name'] . "</button>";
             }
         ?>
