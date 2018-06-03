@@ -30,11 +30,11 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             foreach ($db->query('SELECT id, name FROM "character"') as $row) {
-              $query = "SELECT DISTINCT ON(id) id FROM character_dialouge WHERE id = :cid ORDER BY id";
+              $query = "SELECT DISTINCT ON(id) id FROM character_dialouge WHERE id = :id ORDER BY id";
               $start_id = $row['id'];
               echo "start:" . $start_id;
               $statement = $db->prepare($query);
-              $statement->bindValue(":cid", $start_id, PDO::PARAM_INT);
+              $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
               $statement->execute();
               $dialouge = $statement->fetch();
               echo "id: " . $dialouge['id'];
