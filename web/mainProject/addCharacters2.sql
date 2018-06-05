@@ -26,9 +26,9 @@ insert into character_dialouge(body, character_id)
   ('I agree, we have been blessed greatly by the Lord for this wonderful day.', (select id From character where name = 'Nephi')),
   ('What do you want?', (select id From character where name = 'Laban')),
   ('NO, dont be silly, I cant just give the sacred records to you!', (select id From character where name = 'Laban')), --Give us the brass plates
-  ('Since you asked so nicely, here you can have the records.', (select id From character where name = 'Laban')) --If its not too much trouble could you please give us the Brass plates?
-  ('No, not really! Now Get OUT!', (select id From character where name = 'Laban'))--really?
-  ('Of course I wasn\'t Serious Now Get OUT!', (select id From character where name = 'Laban'))--You aren't being serious are you?
+  ('Since you asked so nicely, here you can have the records.', (select id From character where name = 'Laban')), --If its not too much trouble could you please give us the Brass plates?
+  ('No, not really! Now Get OUT!', (select id From character where name = 'Laban')),--really?
+  ('Of course I was not Serious Now Get OUT!', (select id From character where name = 'Laban')),--You aren't being serious are you?
   ('You Again! I thought I already told you no, Now leave before I have my guards slay you', (select id From character where name = 'Laban'));--speak again
 
 
@@ -47,4 +47,8 @@ insert into user_response(character_id, body, character_dialouge_id, next_dialou
     ((SELECT id FROM character WHERE name = 'Laban'),
      'Give us the brass plates!',
      (SELECT id FROM character_dialouge WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%What do you want?%'))),
-     (SELECT id FROM character_dialouge WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%NO, dont be silly,%'))));
+     (SELECT id FROM character_dialouge WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%NO, dont be silly,%')))),
+     ((SELECT id FROM character WHERE name = 'Laban'),
+      'If its not too much trouble could you please give us the Brass plates?',
+      (SELECT id FROM character_dialouge WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%What do you want?%'))),
+      (SELECT id FROM character_dialouge WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Since you asked so nicely,%'))));

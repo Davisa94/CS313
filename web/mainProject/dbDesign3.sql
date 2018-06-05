@@ -52,15 +52,23 @@ create table user_response
 create table user_data
   (
     id serial primary key,
-    user_name VARCHAR(50),
     first_name VARCHAR(80),
     last_name VARCHAR(80)
   );
 
+create table user_credentials
+  (
+    id serial primary key,
+    user_id SMALLINT references user_data(id),
+    user_name VARCHAR(50),
+    password VARCHAR(255)
+  );
+  
 create table user_relationship
   (
     id serial primary key,
     user_id SMALLINT references user_data(id),
     character_id SMALLINT references character(id),
-    relationship SMALLINT
+    relationship SMALLINT,
+    times_spoken SMALLINT
   );
