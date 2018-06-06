@@ -57,13 +57,13 @@
    //This displays each availiable response TODO: Make this look fancier
 echo "<div \"-right\">";
 
-     echo "<form onsubmit=\"talk.php\" method=\"POST\">";
+     echo "<form action=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialouge_id'];
        echo "<button class = \"mdl-button mdl-js-button
        mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-       type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
+       type=\"submit\" name=\"character\" value=\"$next_id\" >$body</button>";
        echo "<br />";
      };
      echo "</form>";
