@@ -16,7 +16,7 @@
       </header>
 
       <div>
-        <form method="POST" action="talk.php">
+        <form method="POST" action="talk_init.php">
 
         <?php
             $dbUrl = getenv('DATABASE_URL');
@@ -41,7 +41,7 @@
               echo "Statment: " . $statment;
             		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
-                name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk.php\">" .
+                name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk_init.php\">" .
                 $row['name'] . "</button>";
             }
         ?>
