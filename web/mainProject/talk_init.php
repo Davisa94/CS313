@@ -15,7 +15,7 @@
      $id = htmlspecialchars($_POST['character']);
      $db = get_db();
    //create the query to pull the character_dialouge's body where the id = the given id
-     $query = "select body, id FROM character_dialouge WHERE id = :id";
+     $query = "select body, id FROM character_dialouge WHERE character_id = :id";
 
      $statement = $db->prepare($query);
      $statement->bindValue(":id", $id, PDO::PARAM_INT);
