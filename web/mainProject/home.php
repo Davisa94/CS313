@@ -1,4 +1,6 @@
 <html>
+<!--TODO:Change layout to use a list, maybe change button to divs with color and styling with an href, do similiar to talk page  -->
+
 <?php
    require 'head.php';
  ?>
@@ -37,8 +39,6 @@
               $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
               $statement->execute();
               $dialouge = $statement->fetch();
-              echo "id: " . $dialouge['id'];
-              echo "Statment: " . $statment;
             		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text title\"
                 name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk_init.php\">" .
