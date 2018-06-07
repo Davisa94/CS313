@@ -62,7 +62,7 @@ echo "<div \"-right\">";
        $body = $response['body'];
        $next_id = $response['next_dialouge_id'];
        echo "<button class = \"mdl-button mdl-js-button
-       mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
+       mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text\"
        type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
        echo "<br />";
      };
