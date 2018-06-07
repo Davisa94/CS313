@@ -44,7 +44,7 @@
      </div>";
    //display the body TODO: Make this look fancier, maybe centered with a picture of the character
     echo "<div class=\"-center\">";
-    if $row['body']{
+    if isset($row['body']){
      echo $row['body'];
     }
 else{
