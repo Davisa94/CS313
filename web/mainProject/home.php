@@ -40,7 +40,7 @@
               echo "id: " . $dialouge['id'];
               echo "Statment: " . $statment;
             		echo "<button class = \"mdl-button mdl-js-button
-                mdl-button--raised mdl-js-ripple-effect mdl-button--accent\"
+                mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text\"
                 name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk_init.php\">" .
                 $row['name'] . "</button>";
             }

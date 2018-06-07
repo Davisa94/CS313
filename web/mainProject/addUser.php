@@ -22,4 +22,8 @@ $statement = $db->prepare($query);
 $statement->bindValue(":fname", $fname, PDO::PARAM_INT);
 $statement->bindValue(":lname", $lname, PDO::PARAM_INT);
 $statement->execute();
+$user_id = $db->lastInsertId();
+
+#Hash the Password:
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 ?>

@@ -93,6 +93,10 @@ Career  */
    font-family: "Bookman", serif;
 }
 
+.button-text{
+   font-family: "Bookman", serif;
+   font-size: 25%;
+}
 .steel{
    background: rgba(70, 111, 154, 0.47);
    font-family: "Bookman", serif;
