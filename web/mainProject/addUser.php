@@ -1,4 +1,5 @@
-<?php require
+<?php
+require 'dbConnect.php';
 #Get values from post:
 $fname = htmlspecialchars($_POST['fname']);
 $lname = htmlspecialchars($_POST['lname']);
