@@ -17,8 +17,10 @@
 
       <div>
         <form method="POST" action="addUser.php">
+          First Name: <input type="text"  name="fname"/><br />
+          Last Name: <input type="text"  name="lname"/><br />
           Username: <input type="text"  name="user"/><br />
-          Password: <input type="password" name="pass"/>
+          Password: <input type="password" name="pass"/><br />
                     <input type="submit" value="Sign up"/>
         </form>
       </div>
