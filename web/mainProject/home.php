@@ -11,7 +11,7 @@
 <?php
    require 'nav.php';
  ?>
-  <main class="mdl-layout__content" id="main">
+  <main class="mdl-layout__content" id="main-jerusalem">
     <div>
       <header>
          <h2> Choose A Character To Start Speaking With </h1>
