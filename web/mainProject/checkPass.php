@@ -45,8 +45,6 @@ else{
 
   $statement = $db->prepare($query);
   $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
-  echo "row: " . $row;
-  echo "statment: " . $statement;
   $row = $statement->fetch();
   $hashedPass = $row['password'];
   if (checkPasss($pass, $hashedPass))
