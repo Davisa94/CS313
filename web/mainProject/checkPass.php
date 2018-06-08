@@ -32,7 +32,7 @@ else{
   $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
   $row = $statement->fetch();
   $hashedPass = $row['password'];
-  if (checkPass($pass, $user, $hashedPass))
+  if (checkPass($pass, $hashedPass))
   {
     $_SESSION['username'] = $username;
     #header("Location: home.php");
@@ -44,7 +44,7 @@ else{
 }
 
 #query for password using given username if its found
-function checkPass($pass, $uname, $hashedPass){
+function checkPass($pass, $hashedPass){
   if (password_verify($pass, $hashedPass))
   		{
   			return true;
