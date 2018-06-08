@@ -7,6 +7,19 @@ $pass = htmlspecialchars($_POST['pass']);
 function dbFailed($num){
   echo "failed" . $num;
 }
+
+#query for password using given username if its found
+function checkPasss($pass, $hashedPass){
+  $right = false;
+  if (password_verify($pass, $hashedPass))
+  		{
+        echo "hashed: " . $hashedPass;
+        echo "pass: " . $pass;
+  			$right = true;
+  		}
+    return $right;
+}
+
 #TODO:
 #0) Use try catch to check if the username is already taken
 #1) insert into user_data
@@ -43,17 +56,6 @@ else{
   }
 }
 
-#query for password using given username if its found
-function checkPasss($pass, $hashedPass){
-  $right = false;
-  if (password_verify($pass, $hashedPass))
-  		{
-        echo "hashed: " . $hashedPass;
-        echo "pass: " . $pass;
-  			$right = true;
-  		}
-    return $right;
-}
 
 
 //
