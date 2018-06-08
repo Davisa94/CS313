@@ -42,6 +42,7 @@ else{
   $statement->execute();
   $row = $statement->fetch();
   $hashedPass = $row['password'];
+  $hashedPass = (string)$hashedPass;
   $right = false;
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
