@@ -22,7 +22,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
 
 $statement->execute();
-if($statment->rowCount() <= 0){
+if($statement->rowCount() <= 0){
   echo "No name here";
 }
 else{
