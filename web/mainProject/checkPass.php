@@ -24,6 +24,7 @@ try{
   $statement->execute();
 }
 catch( PDOException $Exception ){
+  console.log("\nEntering the catch\n");
   throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
 }
 catch(MyDatabaseException $e){
