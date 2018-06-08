@@ -4,6 +4,7 @@ session_start();
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
 $pass = $_POST['pass'];
+$pass = (string)$pass;
 function dbFailed($num){
   echo "failed" . $num;
 }
@@ -45,7 +46,7 @@ else{
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
 
-  if (password_verify((string)$pass, $hashedPass))
+  if (password_verify($pass, $hashedPass))
       {
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
