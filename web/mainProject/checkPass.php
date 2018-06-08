@@ -48,6 +48,8 @@ function checkPasss($pass, $hashedPass){
   $right = false;
   if (password_verify($pass, $hashedPass))
   		{
+        echo "hashed: " . $hashedPass;
+        echo "pass: " . $pass;
   			$right = true;
   		}
     return $right;
