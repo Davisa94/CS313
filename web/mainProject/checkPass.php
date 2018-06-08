@@ -60,6 +60,9 @@ else{
       else{
           echo "Wrong Password!";
       }
+      if (password_verify('B', '$2y$10$YvY4KO7t/fPZPwesuZyzs.9xdquGYITgHe5thB.8Nim5r1A7hcVRC')){
+        echo "it should Work";
+      }
 
   }
 
