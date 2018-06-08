@@ -22,8 +22,12 @@ try{
   $statement->execute();
 }
 catch( PDOException $Exception ){
-  echo "it failed";
+  throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
 }
+catch(MyDatabaseException $e){
+  dbFailed($e->getCode());
+}
+
 //
 //
 // $user_id = $db->lastInsertId();
