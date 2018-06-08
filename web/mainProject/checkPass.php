@@ -3,7 +3,7 @@ require 'dbConnect.php';
 session_start();
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
-$pass = htmlspecialchars($_POST['pass']);
+$pass = $_POST['pass'];
 function dbFailed($num){
   echo "failed" . $num;
 }
