@@ -46,6 +46,10 @@ else{
   $right = false;
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
+  $oghash = password_hash($pass, PASSWORD_DEFAULT)
+    if (password_verify("$pass", $hashedPass)){
+      echo "OG Hash Works";
+    }
 
   if (password_verify("$pass", $hashedPass))
       {
