@@ -20,16 +20,15 @@ $query = "select user_name FROM user_credentials WHERE user_name = :user_name";
 
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
-try{
-  $statement->execute();
+
+$statement->execute();
+if($statment->rowCount() <= 0){
+  echo "No name here";
 }
-catch( PDOException $Exception ){
-  console.log("\nEntering the catch\n");
-  throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
+else{
+  echo "Name Found!";
 }
-catch(MyDatabaseException $e){
-  dbFailed($e->getCode());
-}
+
 
 //
 //
