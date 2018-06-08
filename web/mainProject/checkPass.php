@@ -11,13 +11,13 @@ function dbFailed($num){
 #query for password using given username if its found
 function checkPasss($pass, $hashedPass){
   $right = false;
-  echo "hashed: " . $hashedPass;
-  echo "pass: " . $pass;
+  echo "\nhashed: " . $hashedPass . "\n";
+  echo "\npass: " . $pass . "\n";
 
-  if (!password_verify($pass, $hashedPass))
+  if (password_verify($pass, $hashedPass))
   		{
-        echo "hashed: " . $hashedPass;
-        echo "pass: " . $pass;
+        echo "\nhashed: " . $hashedPass . "\n";
+        echo "\npass: " . $pass . "\n";
   			$right = true;
   		}
     return $right;
