@@ -11,6 +11,8 @@ function dbFailed($num){
 #query for password using given username if its found
 function checkPasss($pass, $hashedPass){
   $right = false;
+  echo "hashed: " . $hashedPass;
+  echo "pass: " . $pass;
   if (password_verify($pass, $hashedPass))
   		{
         echo "hashed: " . $hashedPass;
