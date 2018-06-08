@@ -5,7 +5,7 @@ require 'dbConnect.php';
 $fname = htmlspecialchars($_POST['fname']);
 $lname = htmlspecialchars($_POST['lname']);
 $user = htmlspecialchars($_POST['user']);
-$pass = htmlspecialchars($_POST['pass']);
+$pass = $_POST['pass'];
 
 #TODO:
 #0) Use try catch to check if the username is already taken
