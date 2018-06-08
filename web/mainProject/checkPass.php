@@ -1,6 +1,6 @@
 <?php
 require 'dbConnect.php';
-
+session_start();
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
 $pass = htmlspecialchars($_POST['pass']);
@@ -26,7 +26,33 @@ if($statement->rowCount() <= 0){
   echo "No name here";
 }
 else{
-  echo "Name Found!";
+  $query = "select password FROM user_credentials WHERE user_name = :user_name";
+
+  $statement = $db->prepare($query);
+  $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
+  $row = $statement->fetch();
+  $hashedPass = $row['password'];
+  if (checkPass($pass, $user, $hashedPass))
+  {
+    $_SESSION['username'] = $username;
+    #header("Location: home.php");
+    #die();
+  }
+  else{
+    echo "Wrong Password!"
+  }
+}
+
+#query for password using given username if its found
+function checkPass($pass, $uname, $hashedPass){
+  if (password_verify($pass, $hashedPass))
+  		{
+  			return true;
+  		}
+  		else
+  		{
+  			return false;
+  		}
 }
 
 
