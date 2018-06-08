@@ -28,4 +28,14 @@ echo $user_id;
 
 #Hash the Password:
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+$query = "insert into user_credentials (user_id, user_name, password)
+  values (:user_id, :user, :pass)";
+
+$statement = $db->prepare($query);
+$statement->bindValue(":user_id", $user_id, PDO::PARAM_INT);
+$statement->bindValue(":user", $user, PDO::PARAM_STR);
+$statement->bindValue(":pass", $hashedPassword, PDO::PARAM_STR);
+$statement->execute();
+
 ?>
