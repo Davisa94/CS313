@@ -4,7 +4,9 @@ require 'dbConnect.php';
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
 $pass = htmlspecialchars($_POST['pass']);
-
+function dbFailed($num){
+  echo "failed" . $num;
+}
 #TODO:
 #0) Use try catch to check if the username is already taken
 #1) insert into user_data
