@@ -44,12 +44,7 @@
      </div>";
    //display the body TODO: Make this look fancier, maybe centered with a picture of the character
     echo "<div class=\"-center\">";
-    if $row['body']{
      echo $row['body'];
-    }
-else{
-    echo "Hello, Nothing to see here.";
-}
     echo "</div>";
    //This builds a query to select the info from user_response that corresponds to the given dialouge ID
      $query = "SELECT id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
