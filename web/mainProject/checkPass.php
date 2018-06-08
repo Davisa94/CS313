@@ -39,7 +39,7 @@ else{
     #die();
   }
   else{
-    echo "Wrong Password!"
+    echo "Wrong Password!";
   }
 }
 
