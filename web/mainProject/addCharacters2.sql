@@ -32,7 +32,7 @@ insert into character_dialouge(body, character_id)
   ('You Again! I thought I already told you no, Now leave before I have my guards slay you', (select id From character where name = 'Laban'));--speak again
 
 
--- i=TODO: Insert two responses for nephi
+-- TODO: Insert two responses for nephi
 
 insert into user_response(character_id, body, character_dialouge_id, next_dialouge_id)
   values

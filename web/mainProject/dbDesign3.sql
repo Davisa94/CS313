@@ -63,7 +63,7 @@ create table user_credentials
     user_name VARCHAR(50),
     password VARCHAR(255)
   );
-  
+
 create table user_relationship
   (
     id serial primary key,

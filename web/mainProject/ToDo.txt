@@ -8,4 +8,8 @@
 5. foreach character in the Character Table display their name as a button
 6. Add one character to the db
 7. Each time you talk to a character add one to the happiness/relationship value of that character(changed later)
-8.
+  a. Setup logins
+    1. hash passwords
+    2. get last_inserted_id
+    3. using last inserted id insert user_name and password tied to it.
+    

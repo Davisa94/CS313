@@ -1,5 +1,6 @@
 <?php
 require 'dbConnect.php';
+
 #Get values from post:
 $fname = htmlspecialchars($_POST['fname']);
 $lname = htmlspecialchars($_POST['lname']);
@@ -23,6 +24,7 @@ $statement->bindValue(":fname", $fname, PDO::PARAM_INT);
 $statement->bindValue(":lname", $lname, PDO::PARAM_INT);
 $statement->execute();
 $user_id = $db->lastInsertId();
+echo $user_id;
 
 #Hash the Password:
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
