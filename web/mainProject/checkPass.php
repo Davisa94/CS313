@@ -19,7 +19,7 @@ function checkPasss($pass, $hashedPass){
 #2) get last insert ID
 #3) use that id to insert into user_id in user_credentials, plus user_name, plus password
 'dbConnect.php';
-$id = htmlspecialchars($_POST['character']);
+
 $db = get_db();
 #First query checks if username exists
 $query = "select user_name FROM user_credentials WHERE user_name = :user_name";
@@ -28,14 +28,16 @@ $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
 
 $statement->execute();
+#check if name is in db
 if($statement->rowCount() <= 0){
   echo "No name here";
 }
+#if name is in db check for password match
 else{
-  $query = "select password FROM user_credentials WHERE user_name = :user_name";
+  $query = "select password FROM user_credentials WHERE user_id = :user_id";
 
   $statement = $db->prepare($query);
-  $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
+  $statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
   $statement->execute();
   $row = $statement->fetch();
   $hashedPass = $row['password'];
@@ -43,19 +45,20 @@ else{
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
 
-  if (password_verify($pass, $hashedPass))
+  if (password_verify((string)$pass, $hashedPass))
       {
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
         $right = true;
+        return $right;
+        $_SESSION['username'] = $username;
+        #header("Location: home.php");
+        #die();
       }
       else{
           echo "Wrong Password!";
       }
-    return $right;
-    $_SESSION['username'] = $username;
-    #header("Location: home.php");
-    #die();
+
   }
 
 
