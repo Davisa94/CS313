@@ -35,10 +35,10 @@ if($statement->rowCount() <= 0){
 }
 #if name is in db check for password match
 else{
-  $query = "select password FROM user_credentials WHERE user_id = :user_id";
+  $query = "select password FROM user_credentials WHERE user_id = :user_name";
 
   $statement = $db->prepare($query);
-  $statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
+  $statement->bindValue(":user_name", $user_name, PDO::PARAM_STR);
   $statement->execute();
   $row = $statement->fetch();
   $hashedPass = $row['password'];
