@@ -47,7 +47,7 @@ else{
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
 
-  if (password_verify($pass, $hashedPass))
+  if (password_verify("$pass", $hashedPass))
       {
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
