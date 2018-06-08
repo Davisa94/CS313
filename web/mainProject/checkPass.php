@@ -10,17 +10,7 @@ function dbFailed($num){
 
 #query for password using given username if its found
 function checkPasss($pass, $hashedPass){
-  $right = false;
-  echo "\nhashed: " . $hashedPass . "\n";
-  echo "\npass: " . $pass . "\n";
 
-  if (password_verify($pass, $hashedPass))
-  		{
-        echo "\nhashed: " . $hashedPass . "\n";
-        echo "\npass: " . $pass . "\n";
-  			$right = true;
-  		}
-    return $right;
 }
 
 #TODO:
@@ -49,16 +39,25 @@ else{
   $statement->execute();
   $row = $statement->fetch();
   $hashedPass = $row['password'];
-  if (checkPasss($pass, $hashedPass))
-  {
+  $right = false;
+  echo "\nhashed: " . $hashedPass . "\n";
+  echo "\npass: " . $pass . "\n";
+
+  if (password_verify($pass, $hashedPass))
+      {
+        echo "\nhashed: " . $hashedPass . "\n";
+        echo "\npass: " . $pass . "\n";
+        $right = true;
+      }
+      else{
+          echo "Wrong Password!";
+      }
+    return $right;
     $_SESSION['username'] = $username;
     #header("Location: home.php");
     #die();
   }
-  else{
-    echo "Wrong Password!";
-  }
-}
+
 
 
 
