@@ -48,7 +48,7 @@
      echo $row['body'];
 //     }
 // else{
-    echo "Hello, Nothing to see here.";
+    // echo "Hello, Nothing to see here.";
 //}
     echo "</div>";
    //This builds a query to select the info from user_response that corresponds to the given dialouge ID
