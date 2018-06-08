@@ -44,7 +44,7 @@ else{
   $query = "select password FROM user_credentials WHERE user_name = :user_name";
 
   $statement = $db->prepare($query);
-  $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
+  $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
   echo "row: " . $row;
   echo "statment: " . $statement;
   $row = $statement->fetch();
