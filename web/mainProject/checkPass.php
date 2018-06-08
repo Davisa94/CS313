@@ -13,8 +13,8 @@ function checkPasss($pass, $hashedPass){
   $right = false;
   echo "hashed: " . $hashedPass;
   echo "pass: " . $pass;
-  echo password_verify($pass, $hashedPass);
-  if (password_verify($pass, $hashedPass))
+
+  if (!password_verify($pass, $hashedPass))
   		{
         echo "hashed: " . $hashedPass;
         echo "pass: " . $pass;
