@@ -21,7 +21,7 @@ $statement->bindValue(":user_name", $user, PDO::PARAM_INT);
 try{
   $statement->execute();
 }
-catch{
+catch( PDOException $Exception ){
   echo "it failed";
 }
 //
