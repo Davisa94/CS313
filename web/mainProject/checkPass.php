@@ -34,7 +34,7 @@ $db = get_db();
 $query = "select user_name FROM user_credentials WHERE user_name = :user_name";
 
 $statement = $db->prepare($query);
-$statement->bindValue(":user_name", $user, PDO::PARAM_INT);
+$statement->bindValue(":user_name", $user, PDO::PARAM_STR);
 
 $statement->execute();
 if($statement->rowCount() <= 0){
