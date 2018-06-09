@@ -19,7 +19,18 @@ function checkPasss($pass, $hashedPass){
 #1) insert into user_data
 #2) get last insert ID
 #3) use that id to insert into user_id in user_credentials, plus user_name, plus password
-'dbConnect.php';
+#TODO:
+#how it works:
+#1) query the db to see if the name exists
+#   a)create select statment store in query;
+#   b) prepare select statment
+#   c)bind values
+#   d)execute stmt
+#   e)statmnt now has the result
+#
+
+
+require 'dbConnect.php';
 
 $db = get_db();
 #First query checks if username exists
@@ -47,7 +58,7 @@ else{
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
   $oghash = password_hash($pass, PASSWORD_DEFAULT);
-    if (password_verify("$pass", $hashedPass)){
+    if(password_verify("$pass", $hashedPass)){
       echo "OG Hash Works";
     }
 
