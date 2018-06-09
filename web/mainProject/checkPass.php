@@ -30,8 +30,6 @@ function checkPasss($pass, $hashedPass){
 #
 
 
-require 'dbConnect.php';
-
 $db = get_db();
 #First query checks if username exists
 $query = "select user_name FROM user_credentials WHERE user_name = :user_name";
