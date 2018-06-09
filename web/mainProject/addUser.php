@@ -6,6 +6,7 @@ $fname = htmlspecialchars($_POST['fname']);
 $lname = htmlspecialchars($_POST['lname']);
 $user = htmlspecialchars($_POST['user']);
 $pass = $_POST['pass'];
+$pass = (string)$pass;
 
 #TODO:
 #0) Use try catch to check if the username is already taken
