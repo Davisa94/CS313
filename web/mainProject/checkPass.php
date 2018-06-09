@@ -52,12 +52,13 @@ else{
   $right = false;
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
-  $oghash = password_hash('B', PASSWORD_DEFAULT);
-    if(password_verify($pass, $oghash)){
+  $oghash = password_hash('C', PASSWORD_DEFAULT);
+    if(password_verify('C', $oghash)){
       echo "OG Hash Works";
+      echo "OG: " . $oghash;
     }
 
-  $pwdverify = password_verify("$pass", $hashedPass);
+  $pwdverify = password_verify($pass, $hashedPass);
   if ($pwdverify)
       {
         echo "\nhashed: " . $hashedPass . "\n";
