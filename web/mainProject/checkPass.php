@@ -53,7 +53,7 @@ else{
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
   $oghash = password_hash('B', PASSWORD_DEFAULT);
-    if(password_verify($pass, $hashedPass)){
+    if(password_verify($pass, $oghash)){
       echo "OG Hash Works";
     }
 
