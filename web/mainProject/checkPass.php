@@ -57,7 +57,7 @@ else{
       echo "OG Hash Works";
     }
 
-  $pwdverify = password_verify("$pass", $hashedPass)
+  $pwdverify = password_verify("$pass", $hashedPass);
   if ($pwdverify)
       {
         echo "\nhashed: " . $hashedPass . "\n";
