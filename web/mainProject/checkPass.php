@@ -5,9 +5,6 @@ session_start();
 $user = htmlspecialchars($_POST['user']);
 $pass = $_POST['pass'];
 $pass = (string)$pass;
-function dbFailed($num){
-  echo "failed" . $num;
-}
 
 #query for password using given username if its found
 function checkPasss($pass, $hashedPass){
@@ -55,7 +52,7 @@ else{
   $right = false;
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
-  $oghash = password_hash($pass, PASSWORD_DEFAULT);
+  $oghash = password_hash('B', PASSWORD_DEFAULT);
     if(password_verify("$pass", $hashedPass)){
       echo "OG Hash Works";
     }
