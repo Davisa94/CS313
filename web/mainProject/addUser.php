@@ -36,7 +36,7 @@ $query = "insert into user_credentials (user_id, user_name, password)
 $statement = $db->prepare($query);
 $statement->bindValue(":user_id", $user_id, PDO::PARAM_INT);
 $statement->bindValue(":user", $user, PDO::PARAM_STR);
-$statement->bindValue(":pass", $hashedPassword, PDO::PARAM_STR);
+$statement->bindValue(":pass", $hashedPassword);
 $statement->execute();
 
 ?>
