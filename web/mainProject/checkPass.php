@@ -73,13 +73,8 @@ echo "\nRAW PASSWORD VERIFY: " . password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q
           echo "Wrong Password!";
           echo "Info: " . password_get_info($hashedPass);
       }
-      if (password_verify('B', '$2y$10$YvY4KO7t/fPZPwesuZyzs.9xdquGYITgHe5thB.8Nim5r1A7hcVRC')){
-        echo "it should Work";
-      }
-
-  }
-
-
+}
+echo $_SESSION['username'];
 
 
 //
