@@ -15,7 +15,7 @@
      $id = htmlspecialchars($_POST['character']);
      $db = get_db();
      require 'events.php';
-     if($event = false){
+     if($event == false){
        //create the query to pull the character_dialogue's body where the id = the given id
          $query = "select body, id FROM character_dialogue WHERE character_id = :id";
 
