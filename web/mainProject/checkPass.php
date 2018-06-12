@@ -73,15 +73,13 @@ else{
         $right = true;
         $_SESSION['username'] = $user;
         echo "<br />Login Works!";
-        // header("Location: home.php");
-        // die();
+        header("Location: home.php");
+        die();
+
       }
       else if($pwdverify == 0){
           echo "<br />Wrong Password!";
           echo "<br />Info: " . password_get_info($hashedPass);
-      }
-      else{
-        echo "<br />\nDEAD WRONG\n";
       }
 }
 
