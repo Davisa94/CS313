@@ -28,8 +28,8 @@ function checkPasss($pass, $hashedPass){
 
 
 $db = get_db();
-#First query checks if username exists
-$query = "select password FROM user_credentials WHERE user_name = :user_name";
+#First query checks if jusername exists
+$query = "select user_name FROM user_credentials WHERE user_name = :user_name";
 
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
@@ -49,6 +49,7 @@ else{
   $statement->bindValue(':user', $user, PDO::PARAM_STR);
   $result = $statement->execute();
   $row = $statement->fetch();
+  var_dump($row);
   foreach ($row as $columns){
       echo "Row: " . $columns;
   }
