@@ -28,7 +28,7 @@ $user_id = $db->lastInsertId();
 echo $user_id;
 
 #Hash the Password:
-$hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+$hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 $pwdverify = password_verify($pass, $hashedPass);
 echo "PASSWORD VERIFY: " . $pwdverify;
 
