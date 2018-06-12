@@ -47,6 +47,7 @@ else{
   $statement->bindValue(':user', $user, PDO::PARAM_STR);
   $statement->execute();
   $row = $statement->fetch();
+  echo "Row: " . $row;
   echo "Row[PASSWORD]: " . $row['password'];
   $hashedPass = $row['password'];
   $right = false;
