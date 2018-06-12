@@ -33,31 +33,47 @@ insert into character_dialogue(body, character_id)
 
 
 -- TODO: Insert two responses for nephi
+create table user_response
+(
+  id serial primary key,
+  character_id SMALLINT references character(id),
+  body text NOT NULL,
+  character_dialogue_id SMALLINT references character_dialogue(id),
+  next_dialogue_id SMALLINT references character_dialogue(id),
+  relationship_modifier SMALLINT DEFAULT 1,
+  response_level SMALLINT
+);
 
-insert into user_response(character_id, body, character_dialogue_id, next_dialogue_id)
+insert into user_response(character_id, body, character_dialogue_id, next_dialogue_id, relationship_modifier)
   values
   ((SELECT id FROM character WHERE name = 'Nephi'),
    'Hey, good weather we are having today isnt it?',
    (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%Hello%'))),
-   (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%I agree, we%')))),
+   (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%I agree, we%'))),
+   1),
    ((SELECT id FROM character WHERE name = 'Nephi'),
     'Hey, How are you doing today?',
     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%Hello%'))),
-    (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%doing well apart%')))),
+    (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Nephi')) AND (body LIKE '%doing well apart%'))),
+    1),
     ((SELECT id FROM character WHERE name = 'Laban'),
      'Give us the brass plates!',
      (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%What do you want?%'))),
-     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%NO, dont be silly,%')))),
+     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%NO, dont be silly,%'))),
+     -2),
      ((SELECT id FROM character WHERE name = 'Laban'),
       'If its not too much trouble could you please give us the Brass plates?',
       (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%What do you want?%'))),
-      (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Since you asked so nicely,%')))),--TODO:MOVE THIS SEMICOLON to the end
+      (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Since you asked so nicely,%'))),
+      -1),
     ((SELECT id FROM character WHERE name = 'Laban'),
     'really?',
     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Since you asked%'))),
-    (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%No, not really!%')))),
+    (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%No, not really!%'))),
+    -3),
 
     ((SELECT id FROM character WHERE name = 'Laban'),
      'You are not being serious are you?',
      (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Since you asked%'))),
-     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Of course I was not%'))));
+     (SELECT id FROM character_dialogue WHERE (character_id = ((SELECT id FROM character WHERE name = 'Laban')) AND (body LIKE '%Of course I was not%'))),
+     -3);

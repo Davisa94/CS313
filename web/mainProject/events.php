@@ -7,7 +7,11 @@ $SARIAH = 3
 $LEMUEL = 5
 $LAMAN = 6
 $LABAN = 4
+require 'getCharacterRelation.php'
 if ($id == $LABAN){
-  if($_SESSION[""])
+  if($relationships[$LABAN] < -4){
+    
+  }
+
 }
 ?>
