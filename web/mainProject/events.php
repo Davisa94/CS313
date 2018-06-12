@@ -12,7 +12,7 @@ require 'getCharacterRelation.php';
 if ($id == $LABAN){
   if($relationships[$LABAN] < -4){
          $event = true;
-         $dialouge_id = 9 //Laban is getting Angry
+         $dialouge_id = 9; //Laban is getting Angry
          $query = "select body, id FROM character_dialogue WHERE id = :id";
          $statement = $db->prepare($query);
          $statement->bindValue(":id", $dialouge_id, PDO::PARAM_INT);
