@@ -30,8 +30,8 @@ echo $user_id;
 #Hash the Password:
 $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 $pwdverify = password_verify($pass, $hashedPass);
-echo "PASSWORD VERIFY: " . $pwdverify;
-
+ $pwdverify;
+echo "\nRAW PASSWORD VERIFY: " .password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q4flcnOr5fCfPMrrHpxe0VbJC4L1nW3x.eKDGu');
 $query = "insert into user_credentials (user_id, user_name, password)
   values (:user_id, :user, :pass)";
 
