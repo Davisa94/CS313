@@ -1,5 +1,5 @@
 <?php
-$loggedin = $_SESSION['username'];
+$loggedin = isset($_SESSION['username']);
 $active = "";
 if($loggedin)
 {
