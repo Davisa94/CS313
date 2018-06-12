@@ -73,8 +73,8 @@ else{
         $right = true;
         $_SESSION['username'] = $user;
         echo "Login Works!";
-        header("Location: home.php");
-        die();
+        // header("Location: home.php");
+        // die();
       }
       else if($pwdverify == 0){
           echo "Wrong Password!";
