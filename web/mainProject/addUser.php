@@ -29,7 +29,7 @@ echo $user_id;
 
 #Hash the Password:
 $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
-$pwdverify = password_verify($pass, $hashedPass);
+$pwdverify = password_verify($pass, $hashedPassword);
 echo "PASSWORD VERIFY: " . $pwdverify;
 echo "\nRAW: " . password_verify('H', '$2y$10$iEuYyP/jvhdLUO1OIuhNMe0J8TKiCRoOihBfcicdZWSHshGMWHPci');
 $query = "insert into user_credentials (user_id, user_name, password)
@@ -40,5 +40,7 @@ $statement->bindValue(":user_id", $user_id, PDO::PARAM_INT);
 $statement->bindValue(":user", $user, PDO::PARAM_STR);
 $statement->bindValue(":pass", $hashedPassword);
 $statement->execute();
+header("Location: home.php");
+die();
 
 ?>
