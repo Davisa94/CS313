@@ -6,7 +6,7 @@
    <div class = "grid">
 
 
-   <?php
+      <?php
 
    // TODO: Add the sourounding html Tags and the header info and such
    // https://github.com/sburton42/cs313-php-18s/tree/master/web/week06_notes

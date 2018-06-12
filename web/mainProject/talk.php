@@ -56,7 +56,7 @@
 
    //This displays each availiable response TODO: Make this look fancier
 echo "<div \"-right\">";
-     echo "<form onsubmit=\"talk.php\" method=\"POST\">";
+     echo "<form onsubmit=\"modifyRelations.php\" method=\"POST\">";
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialogue_id'];
