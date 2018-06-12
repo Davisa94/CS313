@@ -3,6 +3,7 @@ require 'dbConnect.php';
 session_start();
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
+echo $user;
 $pass = $_POST['pass'];
 $pass = (string)$pass;
 
