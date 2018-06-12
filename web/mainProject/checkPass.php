@@ -64,7 +64,7 @@ else{
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
         $right = true;
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $user;
         echo "Login Works!";
         #header("Location: home.php");
         #die();
@@ -77,6 +77,7 @@ else{
         echo "\nDEAD WRONG\n";
       }
 }
+
 echo "<br />Username: " . $_SESSION['username'];
 
 
