@@ -41,7 +41,7 @@ if($statement->rowCount() <= 0){
 }
 #if name is in db check for password match
 else{
-  $query = "select password FROM user_credentials WHERE user_name = :user";
+  $query = 'select password FROM user_credentials WHERE user_name=:user';
 
   $statement = $db->prepare($query);
   $statement->bindValue(':user', $user, PDO::PARAM_STR);
