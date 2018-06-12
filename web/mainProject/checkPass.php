@@ -59,7 +59,7 @@ else{
     }
 echo "\nRAW PASSWORD VERIFY: " . password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q4flcnOr5fCfPMrrHpxe0VbJC4L1nW3x.eKDGu') . "\n";
   $pwdverify = password_verify($pass, $hashedPass);
-  if ($pwdverify)
+  if ($pwdverify == 0)
       {
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
@@ -69,9 +69,12 @@ echo "\nRAW PASSWORD VERIFY: " . password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q
         #header("Location: home.php");
         #die();
       }
-      else{
+      else if($pwdverify){
           echo "Wrong Password!";
           echo "Info: " . password_get_info($hashedPass);
+      }
+      else{
+        echo "\nDEAD WRONG\n";
       }
 }
 echo $_SESSION['username'];
