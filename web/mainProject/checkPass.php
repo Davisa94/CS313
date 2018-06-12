@@ -58,7 +58,7 @@ else{
       echo "OG: " . $oghash;
     }
 
-  $pwdverify = password_verify($pass, $hashedPass);
+  $pwdverify = password_verify($pass, "$hashedPass");
   if ($pwdverify == 1)
       {
         echo "\nhashed: " . $hashedPass . "\n";
@@ -69,7 +69,7 @@ else{
         // header("Location: home.php");
         // die();
       }
-      else if($pwdverify){
+      else if($pwdverify == 0){
           echo "Wrong Password!";
           echo "Info: " . password_get_info($hashedPass);
       }
