@@ -35,7 +35,7 @@ $query = "select password FROM user_credentials WHERE user_name = :user_name";
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
 
-$statement->execute();
+$result = $statement->execute();
 #check if name is in db
 if($statement->rowCount() <= 0){
   echo "No name here";
@@ -49,7 +49,7 @@ else{
   // $statement = $db->prepare($query);
   // $statement->bindValue(':user', $user, PDO::PARAM_STR);
   // $result = $statement->execute();
-  $row = $statement->fetch();
+  $row = $result->fetch();
   foreach ($row as $columns){
       echo "Row: " . $columns;
   }
