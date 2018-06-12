@@ -1,6 +1,4 @@
 <?php
-
- require 'dbConnect.php';
 // TODO:  get user id from db
 // TODO: get users relationship data from DB
 //TODO: Store relationship data in an array sorted by character id
