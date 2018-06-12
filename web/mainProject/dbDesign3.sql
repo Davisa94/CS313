@@ -31,7 +31,7 @@ create table inventory
     quantity SMALLINT NOT NULL DEFAULT 1
   );
 
-create table character_dialouge
+create table character_dialogue
 (
    id SERIAL PRIMARY KEY,
    body text NOT NULL,
@@ -43,8 +43,8 @@ create table user_response
   id serial primary key,
   character_id SMALLINT references character(id),
   body text NOT NULL,
-  character_dialouge_id SMALLINT references character_dialouge(id),
-  next_dialouge_id SMALLINT references character_dialouge(id),
+  character_dialogue_id SMALLINT references character_dialogue(id),
+  next_dialogue_id SMALLINT references character_dialogue(id),
   relationship_modifier SMALLINT DEFAULT 1,
   response_level SMALLINT
 );

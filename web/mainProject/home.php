@@ -32,15 +32,15 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             foreach ($db->query('SELECT id, name FROM "character"') as $row) {
-              $query = "SELECT DISTINCT ON(id) id FROM character_dialouge WHERE id = :id ORDER BY id";
+              $query = "SELECT DISTINCT ON(id) id FROM character_dialogue WHERE id = :id ORDER BY id";
               $start_id = $row['id'];
               $statement = $db->prepare($query);
               $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
               $statement->execute();
-              $dialouge = $statement->fetch();
+              $dialogue = $statement->fetch();
             		echo "<button class = \"mdl-button mdl-js-button
                 mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text title\"
-                name = \"character\" type=\"submit\" value=\"". $dialouge['id'] . "\" href=\"talk_init.php\">" .
+                name = \"character\" type=\"submit\" value=\"". $dialogue['id'] . "\" href=\"talk_init.php\">" .
                 $row['name'] . "</button>";
             }
         ?>
