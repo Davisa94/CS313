@@ -6,6 +6,7 @@
     <nav class="mdl-navigation">
       <?php include 'homeButton.php'; ?>
       <?php include 'assignButton.php'; ?>
+      <?php include 'sessionButton.php'; ?>
     </nav>
  </div>
 </header>

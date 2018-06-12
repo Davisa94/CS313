@@ -66,8 +66,8 @@ else{
         $right = true;
         $_SESSION['username'] = $user;
         echo "Login Works!";
-        #header("Location: home.php");
-        #die();
+        header("Location: home.php");
+        die();
       }
       else if($pwdverify){
           echo "Wrong Password!";
