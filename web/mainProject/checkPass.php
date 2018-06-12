@@ -48,7 +48,6 @@ else{
   $statement->execute();
   $row = $statement->fetch();
   $hashedPass = $row['password'];
-  $hashedPass = (string)$hashedPass;
   $right = false;
   echo "\nhashed: " . $hashedPass . "\n";
   echo "\npass: " . $pass . "\n";
@@ -58,7 +57,7 @@ else{
       echo "OG: " . $oghash;
     }
 
-  $pwdverify = password_verify($pass, "$hashedPass");
+  $pwdverify = password_verify($pass, $hashedPass);
   if ($pwdverify == 1)
       {
         echo "\nhashed: " . $hashedPass . "\n";
