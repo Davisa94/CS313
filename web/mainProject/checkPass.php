@@ -29,7 +29,7 @@ function checkPasss($pass, $hashedPass){
 
 $db = get_db();
 #First query checks if username exists
-$query = "select user_name FROM user_credentials WHERE user_name = :user_name";
+$query = "select password FROM user_credentials WHERE user_name = :user_name";
 
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
@@ -42,12 +42,12 @@ if($statement->rowCount() <= 0){
 
 #if name is in db check for password match
 else{
-  $db = get_db();
-  $query = 'select password FROM user_credentials WHERE user_name=:user';
-
-  $statement = $db->prepare($query);
-  $statement->bindValue(':user', $user, PDO::PARAM_STR);
-  $result = $statement->execute();
+  // $db = get_db();
+  // $query = 'SELECT password FROM user_credentials WHERE user_name=:user';
+  //
+  // $statement = $db->prepare($query);
+  // $statement->bindValue(':user', $user, PDO::PARAM_STR);
+  // $result = $statement->execute();
   $row = $statement->fetch();
   foreach ($row as $columns){
       echo "Row: " . $columns;
