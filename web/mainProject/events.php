@@ -9,16 +9,19 @@ $LAMAN = 6;
 $LABAN = 4;
 $event = false;
 require 'getCharacterRelation.php';
-if ($id == $LABAN){
-  if($relationships[$LABAN] < -4){
-         $event = true;
-         $dialouge_id = 9; //Laban is getting Angry
-         $query = "select body, id FROM character_dialogue WHERE id = :id";
-         $statement = $db->prepare($query);
-         $statement->bindValue(":id", $dialouge_id, PDO::PARAM_INT);
-         $statement->execute();
-         $row = $statement->fetch();
-  }
+if ($relationships->rowCount() > 0){
+  if ($id == $LABAN){
+    if($relationships[$LABAN] < -4){
+           $event = true;
+           $dialouge_id = 9; //Laban is getting Angry
+           $query = "select body, id FROM character_dialogue WHERE id = :id";
+           $statement = $db->prepare($query);
+           $statement->bindValue(":id", $dialouge_id, PDO::PARAM_INT);
+           $statement->execute();
+           $row = $statement->fetch();
+    }
 
+  }
 }
+
 ?>
