@@ -57,7 +57,7 @@ else{
       echo "OG Hash Works";
       echo "OG: " . $oghash;
     }
-echo "\nRAW PASSWORD VERIFY: " . password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q4flcnOr5fCfPMrrHpxe0VbJC4L1nW3x.eKDGu') . "\n";
+
   $pwdverify = password_verify($pass, $hashedPass);
   if ($pwdverify == 0)
       {
