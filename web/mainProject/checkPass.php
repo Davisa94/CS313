@@ -64,8 +64,8 @@ echo "\nRAW PASSWORD VERIFY: " . password_verify($pass, '$2y$10$kx5lDzs8iePqdA/q
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
         $right = true;
-        return $right;
         $_SESSION['username'] = $username;
+        echo "Login Works!";
         #header("Location: home.php");
         #die();
       }
