@@ -47,7 +47,7 @@ else{
   $statement->bindValue(':user', $user, PDO::PARAM_STR);
   $statement->execute();
   $row = $statement->fetch();
-  foreach $columns as $row{
+  foreach $row as $columns{
       echo "Row: " . $columns;
   }
 
