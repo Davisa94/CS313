@@ -59,7 +59,7 @@ else{
     }
 
   $pwdverify = password_verify($pass, $hashedPass);
-  if ($pwdverify == 0)
+  if ($pwdverify == 1)
       {
         echo "\nhashed: " . $hashedPass . "\n";
         echo "\npass: " . $pass . "\n";
