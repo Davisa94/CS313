@@ -9,7 +9,7 @@ $LAMAN = 6;
 $LABAN = 4;
 $event = false;
 require 'getCharacterRelation.php';
-if ($relationships->rowCount() > 0){
+if ($relationships){
   if ($id == $LABAN){
     if($relationships[$LABAN] < -4){
            $event = true;

@@ -7,4 +7,7 @@
  $statement->bindValue(":user_id", $id, PDO::PARAM_STR);
  $statement->execute();
  $relationships = $statement->fetch();
+ if ($statement->rowCount() > 0){
+   $relationships = false;
+ }
 ?>
