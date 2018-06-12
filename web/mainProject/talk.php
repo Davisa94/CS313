@@ -61,6 +61,8 @@ echo "<div \"-right\">";
      foreach ($responses as $response){
        $body = $response['body'];
        $next_id = $response['next_dialogue_id'];
+       #hidden character field:
+       echo "<input type=\"hidden\" name=\"char_id\" value=\"$id\" />";
        echo "<button class = \"mdl-button mdl-js-button
        mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text title\"
        type=\"submit\" name=\"character\" value=\"$next_id\">$body</button>";
