@@ -14,15 +14,15 @@
      require 'dbConnect.php';
      $id = htmlspecialchars($_POST['character']);
      $db = get_db();
-   //create the query to pull the character_dialouge's body where the id = the given id
-     $query = "select body, id FROM character_dialouge WHERE character_id = :id";
+   //create the query to pull the character_dialogue's body where the id = the given id
+     $query = "select body, id FROM character_dialogue WHERE character_id = :id";
 
      $statement = $db->prepare($query);
      $statement->bindValue(":id", $id, PDO::PARAM_INT);
      $statement->execute();
      $row = $statement->fetch();
      //fetch character Name
-     $query = "select character_id FROM character_dialouge WHERE id = :id";
+     $query = "select character_id FROM character_dialogue WHERE id = :id";
 
      $statement = $db->prepare($query);
      $statement->bindValue(":id", $id, PDO::PARAM_INT);
@@ -51,8 +51,8 @@
     // echo "Hello, Nothing to see here.";
 //}
     echo "</div>";
-   //This builds a query to select the info from user_response that corresponds to the given dialouge ID
-     $query = "SELECT id, body, next_dialouge_id FROM user_response WHERE character_dialouge_id = :id";
+   //This builds a query to select the info from user_response that corresponds to the given dialogue ID
+     $query = "SELECT id, body, next_dialogue_id FROM user_response WHERE character_dialogue_id = :id";
      $start_id = $row['id'];
      $statement = $db->prepare($query);
      $statement->bindValue(":id", $start_id, PDO::PARAM_INT);
@@ -65,7 +65,7 @@ echo "<div \"-right\">";
      echo "<form action=\"talk.php\" method=\"POST\">";
      foreach ($responses as $response){
        $body = $response['body'];
-       $next_id = $response['next_dialouge_id'];
+       $next_id = $response['next_dialogue_id'];
        echo "<button class = \"mdl-button mdl-js-button
        mdl-button--raised mdl-js-ripple-effect mdl-button--accent button-text title\"
        type=\"submit\" name=\"character\" value=\"$next_id\" >$body</button>";
