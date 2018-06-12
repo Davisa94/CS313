@@ -21,14 +21,16 @@ $query = "insert into user_data (first_name, last_name)
   values (:fname, :lname)";
 
 $statement = $db->prepare($query);
-$statement->bindValue(":fname", $fname, PDO::PARAM_INT);
-$statement->bindValue(":lname", $lname, PDO::PARAM_INT);
+$statement->bindValue(":fname", $fname, PDO::PARAM_STR);
+$statement->bindValue(":lname", $lname, PDO::PARAM_STR);
 $statement->execute();
 $user_id = $db->lastInsertId();
 echo $user_id;
 
 #Hash the Password:
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+$hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+$pwdverify = password_verify($pass, $hashedPass);
+echo "PASSWORD VERIFY: " . $pwdverify;
 
 $query = "insert into user_credentials (user_id, user_name, password)
   values (:user_id, :user, :pass)";
