@@ -3,7 +3,6 @@ require 'dbConnect.php';
 session_start();
 #Get values from post:
 $user = htmlspecialchars($_POST['user']);
-echo $user;
 $pass = $_POST['pass'];
 $pass = (string)$pass;
 
@@ -35,7 +34,7 @@ $query = "select password FROM user_credentials WHERE user_name = :user_name";
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
 
-$result = $statement->execute();
+$statement->execute();
 #check if name is in db
 if($statement->rowCount() <= 0){
   echo "No name here";
@@ -43,13 +42,13 @@ if($statement->rowCount() <= 0){
 
 #if name is in db check for password match
 else{
-  // $db = get_db();
-  // $query = 'SELECT password FROM user_credentials WHERE user_name=:user';
-  //
-  // $statement = $db->prepare($query);
-  // $statement->bindValue(':user', $user, PDO::PARAM_STR);
-  // $result = $statement->execute();
-  $row = $result->fetch();
+
+  $query = 'SELECT password FROM user_credentials WHERE user_name=:user';
+
+  $statement = $db->prepare($query);
+  $statement->bindValue(':user', $user, PDO::PARAM_STR);
+  $result = $statement->execute();
+  $row = $statement->fetch();
   foreach ($row as $columns){
       echo "Row: " . $columns;
   }
