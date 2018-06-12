@@ -3,7 +3,7 @@ session_start();
 $id = $_POST['char_id'];
 $user_name = $_SESSION['username'];
 #TODO query the table to see if the row already exists if not do the following:
-$query = "SELECT * FROM user_relationship() WHERE (user_id = (SELECT user_id from user_relationship WHERE user_name = ':user_name') AND character_id = :character_id)";
+$query = "SELECT * FROM user_relationship WHERE (user_id = (SELECT user_id from user_relationship WHERE user_name = ':user_name') AND character_id = :character_id)";
 $statement = $db->prepare($query);
 $statement->bindValue(":user_name", $user_name, PDO::PARAM_STR);
 $statement->bindValue(":user_id", $id, PDO::PARAM_STR);
