@@ -10,4 +10,5 @@
  if ($statement->rowCount() > 0){
    $relationships = false;
  }
+ #TODO: check if we are on this same page if we are then go to another page
 ?>
