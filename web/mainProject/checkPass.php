@@ -37,7 +37,7 @@ $statement->bindValue(":user_name", $user, PDO::PARAM_STR);
 $statement->execute();
 #check if name is in db
 if($statement->rowCount() <= 0){
-  echo "No name here";
+  echo "<br />No name here";
 }
 
 #if name is in db check for password match
@@ -51,37 +51,37 @@ else{
   $row = $statement->fetch();
   var_dump($row);
   foreach ($row as $columns){
-      echo "Row: " . $columns;
+      echo "<br />Row: " . $columns;
   }
 
-  echo "Row[PASSWORD]: " . $row['password'];
+  echo "<br />Row[PASSWORD]: " . $row['password'];
   $hashedPass = $row['password'];
   $right = false;
-  echo "\nhashed: " . $hashedPass . "\n";
-  echo "\npass: " . $pass . "\n";
+  echo "\n<br />hashed: " . $hashedPass . "\n";
+  echo "\n<br />pass: " . $pass . "\n";
   $oghash = password_hash('C', PASSWORD_DEFAULT);
     if(password_verify('C', $oghash)){
-      echo "OG Hash Works";
-      echo "OG: " . $oghash;
+      echo "<br />OG Hash Works";
+      echo "<br />OG: " . $oghash;
     }
 
   $pwdverify = password_verify($pass, $hashedPass);
   if ($pwdverify == 1)
       {
-        echo "\nhashed: " . $hashedPass . "\n";
-        echo "\npass: " . $pass . "\n";
+        echo "\n<br />hashed: " . $hashedPass . "\n";
+        echo "\n<br />pass: " . $pass . "\n";
         $right = true;
         $_SESSION['username'] = $user;
-        echo "Login Works!";
+        echo "<br />Login Works!";
         // header("Location: home.php");
         // die();
       }
       else if($pwdverify == 0){
-          echo "Wrong Password!";
-          echo "Info: " . password_get_info($hashedPass);
+          echo "<br />Wrong Password!";
+          echo "<br />Info: " . password_get_info($hashedPass);
       }
       else{
-        echo "\nDEAD WRONG\n";
+        echo "<br />\nDEAD WRONG\n";
       }
 }
 
