@@ -14,13 +14,17 @@
      require 'dbConnect.php';
      $id = htmlspecialchars($_POST['character']);
      $db = get_db();
-   //create the query to pull the character_dialogue's body where the id = the given id
-     $query = "select body, id FROM character_dialogue WHERE character_id = :id";
+     require 'events.php'
+     if($event = false){
+       //create the query to pull the character_dialogue's body where the id = the given id
+         $query = "select body, id FROM character_dialogue WHERE character_id = :id";
 
-     $statement = $db->prepare($query);
-     $statement->bindValue(":id", $id, PDO::PARAM_INT);
-     $statement->execute();
-     $row = $statement->fetch();
+         $statement = $db->prepare($query);
+         $statement->bindValue(":id", $id, PDO::PARAM_INT);
+         $statement->execute();
+         $row = $statement->fetch();
+
+     }
      //fetch character Name
      $query = "select character_id FROM character_dialogue WHERE id = :id";
 
@@ -46,6 +50,7 @@
     echo "<div class=\"-center\">";
     // if isset($row['body']){
      echo $row['body'];
+
 //     }
 // else{
     // echo "Hello, Nothing to see here.";
