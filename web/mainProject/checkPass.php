@@ -19,11 +19,11 @@ function checkPasss($pass, $hashedPass){
 #TODO:
 #how it works:
 #1) query the db to see if the name exists
-#   a)create select statment store in query;
-#   b) prepare select statment
+#   a)create select statement store in query;
+#   b) prepare select statement
 #   c)bind values
 #   d)execute stmt
-#   e)statmnt now has the result
+#   e)statement now has the result
 #
 
 
@@ -39,13 +39,15 @@ $statement->execute();
 if($statement->rowCount() <= 0){
   echo "No name here";
 }
+
 #if name is in db check for password match
 else{
+  $db = get_db();
   $query = 'select password FROM user_credentials WHERE user_name=:user';
 
   $statement = $db->prepare($query);
   $statement->bindValue(':user', $user, PDO::PARAM_STR);
-  $statement->execute();
+  $result = $statement->execute();
   $row = $statement->fetch();
   foreach ($row as $columns){
       echo "Row: " . $columns;
