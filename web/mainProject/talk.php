@@ -55,7 +55,6 @@
      $responses = $statement->fetchAll(PDO::FETCH_ASSOC);
 
    //This displays each availiable response TODO: Make this look fancier
-   echo $_POST['character'];
 echo "<div \"-right\">";
      echo "<form onsubmit=\"modifyRelations.php\" method=\"POST\">";
      foreach ($responses as $response){
