@@ -13,11 +13,7 @@ insert into location(name)
 
 insert into character (name, locationID)
   values ('Nephi', 1),
-         ('Lehi', 1),
-         ('Sariah', 1),
-         ('Laban', 2),
-         ('Lemuel', 1),
-         ('Laman', 1);
+         ('Laban', 2);
 
 insert into character_dialogue(body, character_id)
   values
