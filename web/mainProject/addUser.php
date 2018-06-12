@@ -31,7 +31,7 @@ echo $user_id;
 $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 $pwdverify = password_verify($pass, $hashedPass);
 echo "PASSWORD VERIFY: " . $pwdverify;
-echo "\nRAW: " . password_verify($pass, '$2y$10$iEuYyP/jvhdLUO1OIuhNMe0J8TKiCRoOihBfcicdZWSHshGMWHPci');
+echo "\nRAW: " . password_verify('H', '$2y$10$iEuYyP/jvhdLUO1OIuhNMe0J8TKiCRoOihBfcicdZWSHshGMWHPci');
 $query = "insert into user_credentials (user_id, user_name, password)
   values (:user_id, :user, :pass)";
 
