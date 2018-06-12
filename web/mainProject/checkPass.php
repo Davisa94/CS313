@@ -77,7 +77,7 @@ else{
         echo "\nDEAD WRONG\n";
       }
 }
-echo $_SESSION['username'];
+echo "<br />Username: " . $_SESSION['username'];
 
 
 //
