@@ -13,11 +13,19 @@ insert into location(name)
 
 insert into character (name, locationID)
   values ('Nephi', 1),
-         ('Laban', 2);
+         ('Lehi', 1),
+         ('Sariah', 1),
+         ('Laban', 2),
+         ('Lemuel', 1),
+         ('Laman', 1);
 
 insert into character_dialogue(body, character_id)
   values
   ('Hello', (select id From character where name = 'Nephi')),
+  ('Nothing To See Here', (select id From character where name = 'Lehi')),
+  ('Nothing To See Here', (select id From character where name = 'Sariah')),
+  ('Nothing To See Here', (select id From character where name = 'Laman')),
+  ('Nothing To See Here', (select id From character where name = 'Lemuel')),
   ('I am doing well apart from my apostate brothers.', (select id From character where name = 'Nephi')),
   ('I agree, we have been blessed greatly by the Lord for this wonderful day.', (select id From character where name = 'Nephi')),
   ('What do you want?', (select id From character where name = 'Laban')),
